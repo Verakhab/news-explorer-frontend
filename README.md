@@ -1,1 +1,0 @@
-# Project news-explorer-frontend
