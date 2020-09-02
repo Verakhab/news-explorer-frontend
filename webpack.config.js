@@ -1,4 +1,5 @@
 const path = require('path');
+const cssNano = require('cssnano');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
@@ -63,7 +64,7 @@ module.exports = {
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/i,
-      cssProcessor: require('cssnano'),
+      cssProcessor: cssNano,
       cssProcessorPluginOptions: {
         preset: ['default'],
       },
