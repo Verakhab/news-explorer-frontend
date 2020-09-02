@@ -11,7 +11,7 @@ const isDevelop = process.env.NODE_ENV === 'development';
 module.exports = {
   entry: {
     main: './src/js/index.js',
-    // articles: './src/js/articles/articles.js',
+    articles: './src/js/articles/index.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -75,6 +75,12 @@ module.exports = {
       template: './src/pages/index.html',
       filename: 'index.html',
       chunks: ['main'],
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      template: './src/pages/articles.html',
+      filename: 'articles.html',
+      chunks: ['articles'],
     }),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({
