@@ -1,14 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="news explorer">
+  <meta name="keywords" content="news explorer">
+  <meta name="author" content="Denis Bakharev">
+  <title>Your news</title>
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/png">
   <link rel="stylesheet" type="text/html" href="<%= htmlWebpackPlugin.files.css %>">
 </head>
 <body>
-  <h1>Mainee page</h1>
-  <a href="./articles.html">go to articles page</a>
+  <div class="root">
+    <header class="header">
+      <div class="header__menu">
+        <div class="logo">
+          <p class="logo__text">NewsExplorer</p>
+        </div>
+        <div class="menu">
+          <ul class="menu__list">
+            <li class="menu__item-main"><a class="menu__item-main-text" href="#">Главная</a></li>
+            <li class="menu__item-signin"><a class="menu__item-signin-text" href="#">Авторизоваться</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="header__main">
+        <h1 class="header__title">Что в мире творится?</h1>
+        <h2 class="header__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</h2>
+        <form class="header__form" novalidate name="search">
+          <input
+            type="text"
+            required
+            minlength="2"
+            maxlength="30"
+            name="search"
+            class="header__input"
+            placeholder="Введите тему новости"
+          >
+          <span class="header__form-error"></span>
+          <button type="submit" class="button header__button">Искать</button>
+      </div>
+      <!-- <div class="header__search">
+      </div> -->
+    </header>
+    <h1>Mainee page</h1>
+    <a href="./articles.html">go to articles page</a>
+  </div>
   <script type="module" src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
 </html>

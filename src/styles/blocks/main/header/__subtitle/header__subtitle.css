@@ -1,0 +1,10 @@
+.header__subtitle {
+  max-width: 545px;
+  height: 48px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 0 64px 0;
+}

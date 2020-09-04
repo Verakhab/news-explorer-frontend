@@ -4,14 +4,15 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 
-const isDevelop = process.env.NODE_ENV === 'development';
+const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
   entry: {
-    main: './src/js/index.js',
-    articles: './src/js/articles/index.js',
+    main: './src/scripts/index.js',
+    articles: './src/scripts/articles/index.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -42,7 +43,7 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-          isDevelop ? 'style-loader' : {
+          isDev ? 'style-loader' : {
             loader: MiniCssExtractPlugin.loader,
             options: {
               publicPath: '../',
@@ -85,6 +86,14 @@ module.exports = {
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({
       NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'src/images',
+          to: 'images',
+        },
+      ],
     }),
   ],
 };

@@ -1,0 +1,11 @@
+.menu__item-main-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+  color: white;
+  padding-bottom: 25.8px;
+  border-bottom: 2.7px solid white;
+}

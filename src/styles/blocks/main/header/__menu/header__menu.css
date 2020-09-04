@@ -1,0 +1,9 @@
+.header__menu {
+  max-width: 1440px;
+  height: 79px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: .5px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 37px;
+}

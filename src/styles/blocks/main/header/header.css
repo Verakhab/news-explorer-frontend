@@ -1,0 +1,25 @@
+@import url(./__menu/header__menu.css);
+@import url(./__main/header__main.css);
+@import url(./__title/header__title.css);
+@import url(./__subtitle/header__subtitle.css);
+@import url(./__search/header__search.css);
+@import url(./__form/header__form.css);
+@import url(./__input/header__input.css);
+@import url(./__button/header__button.css);
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-image: url('../../../../images/georgia.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  width: 1440px;
+  height: 576px;
+  margin: 0;
+}

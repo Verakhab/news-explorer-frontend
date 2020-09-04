@@ -1,0 +1,12 @@
+@import url(../vendor/normalize.css);
+@import url(../blocks/main/root/root.css);
+@import url(../blocks/main/header/header.css);
+@import url(../vendor/fonts/fonts.css);
+@import url(../blocks/main/menu/menu.css);
+@import url(../blocks/main/logo/logo.css);
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
