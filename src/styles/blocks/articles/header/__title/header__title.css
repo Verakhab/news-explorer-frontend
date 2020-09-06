@@ -1,0 +1,15 @@
+.header__title {
+  max-width: 500px;
+  margin: 0;
+  position: relative;
+  right: 312px;
+  top: 32px;
+  max-width: 608px;
+  height: 128px;
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  margin-bottom: 33px;
+}

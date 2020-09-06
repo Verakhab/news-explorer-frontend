@@ -1,0 +1,8 @@
+.menu__item-signin-text_signin {
+  text-decoration: none;
+  color: white;
+  padding: 11px;
+  border: 1px solid  rgba(255, 255, 255);
+  border-radius: 50px;
+  display: block;
+}

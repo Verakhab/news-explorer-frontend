@@ -1,0 +1,10 @@
+.result__container {
+  position: relative;
+  top: 45px;
+  margin-bottom: 106px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 1px 86px 0 102px;
+}

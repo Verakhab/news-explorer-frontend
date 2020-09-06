@@ -1,0 +1,9 @@
+.popup__button.popup__button_result {
+  width: 20%;
+  position: relative;
+  top: 0;
+  margin-top: 125px;
+  margin-bottom: 80px;
+  align-self: center;
+  background-color: #FFFFFF;
+}

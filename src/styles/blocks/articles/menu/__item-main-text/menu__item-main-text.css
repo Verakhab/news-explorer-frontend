@@ -1,0 +1,8 @@
+@import url(./_save/menu__item-main-text_save.css);
+
+.menu__item-main-text {
+  color: #1A1B22;
+  text-decoration: none;
+  padding-bottom: 23.8px;
+  border-bottom: 2px solid white;
+}

@@ -1,0 +1,14 @@
+.footer__list {
+  width: 390px;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  top: 13px;
+  right: 108px;
+  list-style-type: none;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+}

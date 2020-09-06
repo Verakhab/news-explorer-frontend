@@ -1,0 +1,10 @@
+.popup__registration-succes {
+  position: relative;
+  top: 20px;
+  color: #2F71E5;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+}

@@ -1,0 +1,11 @@
+@import url(./_one/preloader-block__img_one.css);
+@import url(./_two/preloader-block__img_two.css);
+@import url(./_three/preloader-block__img_three.css);
+@import url(./_four/preloader-block__img_four.css);
+@import url(./_five/preloader-block__img_five.css);
+
+.preloader-block__img {
+  position: relative;
+  max-width: 74px;
+  max-height: 74px;
+}

@@ -1,0 +1,11 @@
+@import url(./_two/news__img-share_two.css);
+@import url(./_about/news__img-share_about.css);
+@import url(./_about-text/news__img-share_about-text.css);
+@import url(./_title/news__img-share_title.css);
+
+.news__img-share {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 1;
+}

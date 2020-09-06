@@ -1,0 +1,11 @@
+.result__title {
+  position: relative;
+  top: 48px;
+  left: 102px;
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  color: #1A1B22;
+}

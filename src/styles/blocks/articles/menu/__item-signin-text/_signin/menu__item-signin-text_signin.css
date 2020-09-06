@@ -1,0 +1,7 @@
+.menu__item-signin-text_signin {
+  text-decoration: none;
+  padding: 11px;
+  border-bottom: 2.8px solid #1A1B22;
+  border-radius: 50px;
+  display: block;
+}

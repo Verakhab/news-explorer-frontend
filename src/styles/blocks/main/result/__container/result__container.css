@@ -1,0 +1,10 @@
+.result__container {
+  min-height: 282px;
+  position: relative;
+  top: 61px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 1px 86px 0 102px;
+}

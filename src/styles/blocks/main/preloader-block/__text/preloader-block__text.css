@@ -1,0 +1,9 @@
+@import url(./_no-result/preloader-block__text_no-result.css);
+@import url(./_no-result-two/preloader-block__text_no-result-two.css);
+
+.preloader-block__text {
+  position: relative;
+  top: 44px;
+  color: #333;
+  z-index: 4;
+}

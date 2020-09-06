@@ -1,0 +1,20 @@
+@import url(./__img/news__img.css);
+@import url(./__img-share/news__img-share.css);
+@import url(./__container-img/news__container-img.css);
+@import url(./__about/news__about.css);
+@import url(./__date/news__date.css);
+@import url(./__title/news__title.css);
+@import url(./__resume/news__resume.css);
+@import url(./__author/news__author.css);
+
+.news {
+  max-width: 400px;
+  min-height: 576px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 16px;
+  position: relative;
+  margin-top: 16px;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+}
