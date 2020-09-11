@@ -1,9 +1,0 @@
-.menu__list.menu__list_save-news {
-  width: 29.2vw;
-}
-
-@media screen and (max-width: 768px) {
-  .menu__list.menu__list_save-news {
-    width: 44.4vw;
-  }
-}
