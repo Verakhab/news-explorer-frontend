@@ -1,8 +1,26 @@
 .author__foto {
   position: relative;
-  top: 80px;
-  left: 105px;
-  width: 465px;
-  height: 464px;
+  top: 5.65vw;
+  left: 7.3vw;
+  width: 32%;
+  height: 28.25%;
   border-radius: 550px;
+}
+
+@media screen and (max-width: 768px) {
+  .author__foto {
+    top: 7.95vw;
+    left: 5.3vw;
+    width: 30%;
+    height: 30vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .author__foto {
+    top: 12.6vw;
+    left: 7.3vw;
+    width: 85%;
+    height: 86vw;
+  }
 }

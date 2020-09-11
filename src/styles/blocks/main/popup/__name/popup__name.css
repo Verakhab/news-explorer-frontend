@@ -8,9 +8,22 @@
 
 .popup__name {
   position: relative;
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 0.761vw;
   line-height: 15px;
   color: #2F71E5;
+}
+
+@media screen and (max-width: 768px) {
+  .popup__name {
+    font-size: 1.6vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .popup__name {
+      font-size: 3.6vw;
+  }
 }

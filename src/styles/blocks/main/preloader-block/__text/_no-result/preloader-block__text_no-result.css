@@ -1,7 +1,7 @@
 .preloader-block__text.preloader-block__text_no-result {
   top: 19px;
   position: relative;
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 26px;

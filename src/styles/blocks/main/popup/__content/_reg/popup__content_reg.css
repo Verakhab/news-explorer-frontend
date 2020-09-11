@@ -1,4 +1,11 @@
 .popup__content.popup__content_reg {
-  top: 73px;
+  top: -0.7vw;
   min-height: 460px;
+}
+
+@media screen and (max-width: 768px) {
+  .popup__content.popup__content_reg {
+    top: 4.8vw;
+    min-height: 460px;
+  }
 }

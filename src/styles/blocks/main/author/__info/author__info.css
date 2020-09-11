@@ -1,6 +1,21 @@
 .author__info {
-  width: 600px;
+  width: 42%;
+  height: 10%;
   position: relative;
-  top: 100px;
-  left: 162px;
+  top: 6.8vw;
+  left: 11.4vw;
+}
+
+@media screen and (max-width: 768px) {
+  .author__info {
+    width: 54%;
+    top: 0.57vw;
+    left: 9.4vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .author__info {
+    width: 54%;
+  }
 }

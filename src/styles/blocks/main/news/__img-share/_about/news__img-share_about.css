@@ -1,6 +1,22 @@
 .news__img-share.news__img-share_about {
+  width: 56%;
   position: absolute;
-  top: 13px;
-  right: 48px;
+  top: 0.8vw;
+  right: 3.4vw;
   z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .news__img-share.news__img-share_about {
+    width: 69%;
+    height: 10.7vw;
+    top: -.3vw;
+    right: 5vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .news__img-share.news__img-share_about {
+    display: none;
+  }
 }

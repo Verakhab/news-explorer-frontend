@@ -1,13 +1,21 @@
 .news__img-share.news__img-share_about-text {
   position: absolute;
-  top: 40px;
-  left: 159px;
-  font-family: 'Roboto';
+  width: 40%;
+  max-width: 100%;
+  top: 2.65vw;
+  left: 11.1vw;
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 10px;
+  font-size: 0.69vw;
   line-height: 12px;
   color: #000000;
   text-decoration: none;
   z-index: 3;
+}
+
+@media screen and (max-width: 768px) {
+  .news__img-share.news__img-share_about-text {
+    display: none;
+  }
 }

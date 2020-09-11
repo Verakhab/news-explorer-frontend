@@ -1,22 +1,15 @@
-@import url(./_reg/popup__content_reg.css);
 @import url(./_succes/popup__content_succes.css);
 
 .popup__content {
   display: flex;
   flex-direction: column;
-  width: 430px;
+  width: 30vw;
   min-height: 380px;
   background-color: #fff;
   border-radius: 15px;
   position: relative;
-  top: 64px;
-  left: 45px;
+  top: 1.21vw;
+  left: 35vw;
   box-sizing: border-box;
   padding: 34px 36px;
-}
-
-@media screen and (max-width: 540px) {
-  .popup__content {
-    width: calc(100% - 60px);
-  }
 }

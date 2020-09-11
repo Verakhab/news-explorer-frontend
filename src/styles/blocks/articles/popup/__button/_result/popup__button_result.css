@@ -7,3 +7,14 @@
   align-self: center;
   background-color: #FFFFFF;
 }
+
+@media screen and (max-width: 768px) {
+  .popup__button.popup__button_result {
+    width: 31%;
+    height: 7vw;
+    top: 2vw;
+    left: 1vw;
+    font-size: 1.3vw;
+    margin: 0;
+  }
+}

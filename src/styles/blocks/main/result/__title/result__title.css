@@ -1,11 +1,30 @@
 .result__title {
   position: relative;
-  top: 48px;
-  left: 102px;
-  font-family: 'Roboto Slab';
+  top: 4.5vw;
+  left: 7vw;
+  font-family: 'Roboto Slab', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 40px;
-  line-height: 46px;
+  font-size: 3vw;
+  line-height: 3vw;
   color: #1A1B22;
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .result__title {
+    top: 4.1vw;
+    left: 5vw;
+    font-size: 4vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .result__title {
+    top: 5.1vw;
+    width: 1vw;
+    left: 5vw;
+    font-size: 9.4vw;
+    line-height: 11vw;
+  }
 }

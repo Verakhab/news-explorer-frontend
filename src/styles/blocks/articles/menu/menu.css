@@ -4,6 +4,7 @@
 @import url(./__item-signin-text/_signin/menu__item-signin-text_signin.css);
 @import url(./_save-news/menu_save-news.css);
 @import url(./_signin-news/menu_signin-news.css);
+@import url(./_signin-news-two/menu_signin-news-two.css);
 
 .menu {
   display: flex;

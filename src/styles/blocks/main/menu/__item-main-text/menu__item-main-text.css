@@ -1,8 +1,24 @@
 @import url(./_save/menu__item-main-text_save.css);
+@import url(./_mobile/menu__item-main-text_mobile.css);
+@import url(./_mobile-two/menu__item-main-text_mobile-two.css);
 
 .menu__item-main-text {
   text-decoration: none;
   color: white;
   padding-bottom: 23.8px;
   border-bottom: 2px solid white;
+  margin-right: 41px;
+}
+
+@media screen and (max-width: 768px) {
+  .menu__item-main-text {
+    padding-bottom: 21.8px;
+    margin-right: 41px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .menu__item-main-text {
+    display: none;
+  }
 }

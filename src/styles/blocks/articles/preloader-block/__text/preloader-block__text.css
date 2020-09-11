@@ -4,7 +4,7 @@
 .preloader-block__text {
   position: relative;
   top: 44px;
-  font-family: 'Roboto';
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;

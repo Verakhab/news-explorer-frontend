@@ -10,11 +10,26 @@
   color: rgba(0, 0, 0, .2);
   font-size: 36px;
   border-radius: 100px;
-  font-family: 'Roboto';
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 1.13vw;
+  line-height: 1vw;
   color: #B6BCBF;
   background-color: #E6E8EB;
+}
+
+@media screen and (max-width: 768px) {
+  .popup__button {
+    font-size: 2vw;
+    top: 99px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .popup__button {
+      font-size: 5vw;
+      top: 79px;
+      width: 90vw;
+  }
 }

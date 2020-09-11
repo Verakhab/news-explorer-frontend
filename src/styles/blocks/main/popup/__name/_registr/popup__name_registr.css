@@ -1,12 +1,28 @@
 .popup__name_registr {
   position: relative;
-  top: 116px;
-  left: 98px;
+  top: 8vw;
+  left: 6.5vw;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 1vw;
+  line-height: 1vw;
   color: #000000;
   text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .popup__name_registr {
+    top: 14.5vw;
+    left: 12vw;
+    font-size: 1.91vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .popup__name_registr {
+    top: 29.5vw;
+    left: 22vw;
+    font-size: 3.91vw;
+  }
 }

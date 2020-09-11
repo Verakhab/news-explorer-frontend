@@ -6,3 +6,16 @@
   border-radius: 50px;
   display: block;
 }
+
+@media screen and (max-width: 768px) {
+  .menu__item-signin-text_signin {
+    font-size: 2vw;
+    padding: 7px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .menu__item-signin-text_signin {
+    display: none;
+  }
+}

@@ -1,10 +1,31 @@
 .result__container {
+  width: 87%;
   min-height: 282px;
   position: relative;
-  top: 61px;
+  top: 5.4vw;
+  left: 7.1vw;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-start;
-  padding: 1px 86px 0 102px;
+  padding: 1px 0 0 0;
+}
+
+@media screen and (max-width: 768px) {
+  .result__container {
+    width: 90%;
+    top: 4vw;
+    left: 5.4vw;
+    margin-bottom: 48px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .result__container {
+    top: 5.1vw;
+    width: 92vw;
+    left: 5vw;
+    font-size: 9.4vw;
+    line-height: 11vw;
+  }
 }

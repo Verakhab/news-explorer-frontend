@@ -1,15 +1,37 @@
 .header__title {
-  max-width: 500px;
-  margin: 0;
   position: relative;
-  right: 312px;
-  top: 32px;
-  max-width: 608px;
+  top: 1.5vw;
+  left: 7.2vw;
+  max-width: 610px;
   height: 128px;
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 40px;
-  line-height: 46px;
-  margin-bottom: 33px;
+  font-size: 3vw;
+  line-height: 61px;
+  letter-spacing: -0.1vw;
+  margin: 0;
+  color: #1A1B22;
+}
+
+@media screen and (max-width: 768px) {
+  .header__title {
+    top: 0.3vw;
+    left: 5.2vw;
+    max-width: 396px;
+    font-size: 4vw;
+    line-height: 47px;
+    letter-spacing: -0.1vw;
+    margin: 0;
+    color: #1A1B22;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header__title {
+    top: 1.3vw;
+    max-width: 286px;
+    font-size: 9.5vw;
+    line-height: 36px;
+  }
 }

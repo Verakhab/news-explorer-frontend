@@ -1,11 +1,29 @@
 .news__resume {
   position: relative;
-  top: 27px;
-  font-family: 'Roboto';
+  top: 2.8vw;
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 1.11vw;
+  line-height: 1.5vw;
   color: #1A1B22;
   margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .news__resume {
+    top: 5.8vw;
+    right: 1vw;
+    font-size: 2vw;
+    line-height: 2.7vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .news__resume {
+    top: 24.8vw;
+    right: 3vw;
+    font-size: 5vw;
+    line-height: 6.7vw;
+  }
 }

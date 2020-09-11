@@ -1,3 +1,12 @@
 .logo {
-  padding: 5px 0 0 105px;
+  padding: 5px 0 0 7.2vw;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+      position: relative;
+      top: 0.3vw;
+      left: 5.2vw;
+      padding: 0;
+  }
 }

@@ -8,13 +8,32 @@
 @import url(./__author/news__author.css);
 
 .news {
-  max-width: 400px;
+  max-width: 32%;
   min-height: 576px;
   display: flex;
   flex-direction: column;
-  margin-right: 16px;
+  margin-right: 15px;
   position: relative;
   margin-top: 16px;
   border-radius: 20px;
   background-color: #FFFFFF;
+}
+
+@media screen and (max-width: 768px) {
+  .news {
+    min-height: 420px;
+    max-width: 32.465%;
+    margin-right: 6px;
+    margin-top: 11px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .news {
+      min-height: 441px;
+      max-width: 98%;
+      margin-right: 6px;
+      margin-top: 18.72px;
+      top: -5vw;
+  }
 }

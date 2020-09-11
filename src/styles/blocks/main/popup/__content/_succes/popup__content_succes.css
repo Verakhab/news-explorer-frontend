@@ -1,5 +1,12 @@
 .popup__content.popup__content_succes {
-  top: 37px;
+  top: -2.6vw;
   min-height: 182px;
   padding: 43px 34px;
+}
+
+@media screen and (max-width: 768px) {
+  .popup__content.popup__content_succes {
+    top: -13.2vw;
+    padding: 33px 34px;
+  }
 }

@@ -1,13 +1,29 @@
 .news__author {
   position: relative;
-  top: 47px;
-  font-family: 'Roboto Slab';
+  top: 4.4vw;
+  font-family: 'Roboto Slab', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0.4px;
+  font-size: 1.11vw;
+  line-height: 1.32vw;
+  letter-spacing: 0.03vw;
   text-transform: uppercase;
   color: #B6BCBF;
   margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .news__author {
+    top: 8.2vw;
+    left: -0.6vw;
+    font-size: 2.11vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .news__author {
+    top: 37.2vw;
+    left: -2.6vw;
+    font-size: 5.11vw;
+  }
 }

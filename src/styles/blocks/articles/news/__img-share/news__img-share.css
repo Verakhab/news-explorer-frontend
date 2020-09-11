@@ -4,8 +4,25 @@
 @import url(./_title/news__img-share_title.css);
 
 .news__img-share {
+  width: 9%;
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 1.7vw;
+  right: 1.91vw;
   z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .news__img-share {
+    width: 18%;
+    top: 1.1vw;
+    right: 1vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .news__img-share {
+      width: 14%;
+      top: 5.1vw;
+      right: 5vw;
+  }
 }

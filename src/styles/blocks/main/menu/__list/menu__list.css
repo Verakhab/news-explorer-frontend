@@ -1,16 +1,34 @@
 @import url(./_save-news/menu__list_save-news.css);
+@import url(./_mobile/menu__list_mobile.css);
 
 .menu__list {
-  width: 270px;
+  width: 19vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Roboto';
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.2vw;
   line-height: 24px;
   list-style-type: none;
   margin: 0;
   padding-top: 5px;
+  position: relative;
+  left: 31vw;
 }
+
+@media screen and (max-width: 768px) {
+  .menu__list {
+    font-size: 2.05vw;
+    position: relative;
+    left: 29vw;
+    padding: 0;
+  }
+}
+
+/* @media screen and (max-width: 320px) {
+  .menu__list {
+
+  }
+} */
