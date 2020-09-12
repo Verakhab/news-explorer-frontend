@@ -44,12 +44,12 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-          isDev ? 'style-loader' : {
+          (isDev ? 'style-loader' : {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: '../',
+              publicPath: './',
             },
-          },
+          }),
           'css-loader',
           'postcss-loader',
         ],
@@ -62,7 +62,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'style/style.[contenthash].css',
+      filename: 'style.[contenthash].css',
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/i,
@@ -86,7 +86,7 @@ module.exports = {
     }),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({
-      NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+      'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     }),
     new CopyPlugin({
       patterns: [

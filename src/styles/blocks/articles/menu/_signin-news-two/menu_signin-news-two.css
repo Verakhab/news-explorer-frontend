@@ -1,9 +1,9 @@
-.menu.menu_signin-news-two {
+.menu_signin-news-two {
   max-width: 1440px;
 }
 
 @media screen and (max-width: 320px) {
-  .menu.menu_signin-news-two {
+  .menu_signin-news-two {
     width: 4.3vw;
     height: 0.6vw;
     position: relative;
