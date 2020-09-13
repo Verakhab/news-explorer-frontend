@@ -20,3 +20,9 @@
     width: 44.4vw;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .menu__list.menu__list_save-news {
+    display: none;
+  }
+}

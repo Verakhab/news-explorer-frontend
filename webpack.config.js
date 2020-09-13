@@ -86,7 +86,7 @@ module.exports = {
     }),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({
-      'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+      NODE_ENV: JSON.stringify(process.env.NODE_ENV),
     }),
     new CopyPlugin({
       patterns: [

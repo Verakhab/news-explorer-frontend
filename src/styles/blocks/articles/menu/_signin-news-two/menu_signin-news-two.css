@@ -3,7 +3,7 @@
 }
 
 @media screen and (max-width: 320px) {
-  .menu_signin-news-two {
+  .menu.menu_signin-news-two {
     width: 4.3vw;
     height: 0.6vw;
     position: relative;
