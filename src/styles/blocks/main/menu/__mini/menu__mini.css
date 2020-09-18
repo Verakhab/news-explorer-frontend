@@ -1,0 +1,11 @@
+.menu__mini {
+  display: none;
+}
+
+@media screen and (max-width: 320px) {
+  .menu__mini {
+    display: block;
+    width: 5vw;
+    height: 0.69vw;
+  }
+}

@@ -3,11 +3,11 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 3.7%;
+  width: 5.5%;
   min-height: 3.3%;
   position: absolute;
-  top: 2.4vw;
-  right: 2.65vw;
+  top: 2.49vw;
+  right: 2.375vw;
   z-index: 2;
   opacity: 0.5;
 }
@@ -25,10 +25,10 @@
 
 @media screen and (max-width: 768px) {
   .news__img-share.news__img-share_two {
-    width: 7.7%;
-    min-height: 6.3%;
-    top: 2.1vw;
-    right: 2.45vw;
+    width: 2.5vw;
+    min-height: 5.3%;
+    top: 2.3vw;
+    right: 2.9vw;
     background-image: url(../../../../../../images/ящик.jpg);
   }
 
@@ -46,8 +46,9 @@
 
 @media screen and (max-width: 320px) {
   .news__img-share.news__img-share_two {
-      min-height: 5.9%;
-      top: 7.4vw;
-      right: 8vw;
+    min-height: 5.9%;
+    top: 7.4vw;
+    right: 8.6vw;
+    width: 5.5vw;
   }
 }

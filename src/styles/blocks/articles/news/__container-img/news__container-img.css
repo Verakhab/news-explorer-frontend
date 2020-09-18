@@ -9,3 +9,10 @@
     height: 150px;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .news__container-img {
+    border-top-right-radius: 4.3vw;
+    border-top-left-radius: 4.3vw;
+  }
+}

@@ -3,10 +3,10 @@
 @import url(./_about-text/news__img-share_about-text.css);
 
 .news__img-share {
-  width: 9%;
+  width: 10%;
   position: absolute;
   top: 1.7vw;
-  right: 1.91vw;
+  right: 1.8vw;
   z-index: 1;
 }
 

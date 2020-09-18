@@ -1,9 +1,9 @@
 .news__img {
   position: relative;
-  width: 27.8vw;
+  width: 312.3%;
   height: 100%;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+  border-top-right-radius: 1.3vw;
+  border-top-left-radius: 1.3vw;
   z-index: 0;
 }
 
@@ -15,7 +15,9 @@
 
 @media screen and (max-width: 320px) {
   .news__img {
-      width: 90.3vw;
-      height: 61vw;
+    width: 311.3%;
+    border-top-right-radius: 4.3vw;
+    border-top-left-radius: 4.3vw;
+    height: 61vw;
   }
 }

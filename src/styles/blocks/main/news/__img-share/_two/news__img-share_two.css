@@ -6,7 +6,7 @@
   width: 3.7%;
   min-height: 3.3%;
   position: absolute;
-  top: 2.4vw;
+  top: 2.42vw;
   right: 2.65vw;
   z-index: 2;
   opacity: 0.5;
@@ -32,8 +32,9 @@
 
 @media screen and (max-width: 320px) {
   .news__img-share.news__img-share_two {
-    min-height: 5.9%;
-    top: 7.4vw;
-    right: 8vw;
+    min-height: 4%;
+    width: 5%;
+    top: 8.4vw;
+    right: 9vw;
   }
 }

@@ -5,26 +5,27 @@
   font-family: 'Roboto Slab', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 3vw;
+  font-size: 2.8vw;
   line-height: 3vw;
   color: #1A1B22;
-  margin-top: 16px;
+  margin: 1.2vw 0 2.39vw 0;
 }
 
 @media screen and (max-width: 768px) {
   .result__title {
-    top: 4.1vw;
+    top: 5.1vw;
     left: 5vw;
-    font-size: 4vw;
+    font-size: 3.94vw;
   }
 }
 
 @media screen and (max-width: 320px) {
   .result__title {
-    top: 5.1vw;
+    top: 8.1vw;
     width: 1vw;
     left: 5vw;
     font-size: 9.4vw;
     line-height: 11vw;
+    margin: 1vw 0 11.39vw 0;
   }
 }

@@ -1,29 +1,24 @@
 .header__menu {
   max-width: 1440px;
-  height: 79px;
+  height: 5.5vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: .5px solid rgba(255, 255, 255, 0.2);
-  margin-bottom: 37px;
-}
-
-@media screen and (min-width: 1441px) {
-  .header__menu {
-    display: block;
-  }
+  margin-bottom: 2.5vw;
 }
 
 @media screen and (max-width: 768px) {
   .header__menu {
     max-width: 768px;
-    height: 65px;
+    height: 8.4vw;
+    margin-bottom: 5.5vw;
   }
 }
 
 @media screen and (max-width: 320px) {
   .header__menu {
-    max-width: 320px;
-    height: 54px;
+    max-width: 103vw;
+    height: 16vw;
   }
 }

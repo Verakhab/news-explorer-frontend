@@ -16,6 +16,7 @@
 @import url(./__registration-link/popup__registration-link.css);
 @import url(./__registration-succes/popup__registration-succes.css);
 @import url(./__error/popup__error.css);
+@import url(./__content/_mobile-320/popup__content_mobile-320.css);
 
 .popup {
   position: fixed;

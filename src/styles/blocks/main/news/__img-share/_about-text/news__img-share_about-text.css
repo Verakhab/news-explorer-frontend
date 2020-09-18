@@ -3,11 +3,11 @@
   width: 40%;
   max-width: 100%;
   top: 2.65vw;
-  left: 11.1vw;
+  left: 11.19vw;
   font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 0.69vw;
+  font-size: 0.699vw;
   line-height: 12px;
   color: #000000;
   text-decoration: none;
@@ -23,7 +23,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 320px) {
   .news__img-share.news__img-share_about-text {
     display: none;
   }

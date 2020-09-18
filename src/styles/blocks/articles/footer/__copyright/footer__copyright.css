@@ -1,7 +1,7 @@
 .footer__copyright {
   height: 1vw;
   position: relative;
-  top: 2.1vw;
+  top: 3.1vw;
   left: 7.1vw;
   font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
@@ -24,6 +24,6 @@
   .footer__copyright {
       top: -9vw;
       font-size: 5vw;
-      width: 91vw;
+      width: 89.3vw;
   }
 }

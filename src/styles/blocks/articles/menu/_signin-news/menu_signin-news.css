@@ -1,16 +1,16 @@
 .menu.menu_signin-news {
   display: block;
+  padding: 0 7.5vw 0 0;
+}
+
+@media screen and (max-width: 768px) {
+  .menu.menu_signin-news {
+    padding: 0.4vw 12vw 0 0;
+  }
 }
 
 @media screen and (max-width: 320px) {
   .menu.menu_signin-news {
-    width: 4.3vw;
-    height: 0.6vw;
-    position: relative;
-    left: 27vw;
-    top: 1.3vw;
-    margin: 0;
-    background-color: #1A1B22;
-    background-size: 1px 1px;
+    display: none;
   }
 }

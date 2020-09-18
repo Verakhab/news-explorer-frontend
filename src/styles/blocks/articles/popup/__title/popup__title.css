@@ -1,3 +1,5 @@
+@import url(./_mobile/popup__title_mobile.css);
+
 .popup__title {
   margin: 0;
   font-size: 1.69vw;

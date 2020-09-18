@@ -1,0 +1,12 @@
+.menu__mini_two {
+  display: none;
+}
+
+@media screen and (max-width: 320px) {
+  .menu__mini_two {
+    display: block;
+    width: 5vw;
+    padding: 1.5vw 0 0 0;
+    height: 0.69vw;
+  }
+}

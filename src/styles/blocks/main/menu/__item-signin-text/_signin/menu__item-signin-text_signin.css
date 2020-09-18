@@ -1,7 +1,7 @@
 .menu__item-signin-text_signin {
   text-decoration: none;
   color: white;
-  padding: 11px;
+  padding: 0.8vw 1.5vw;
   border: 1px solid  rgba(255, 255, 255);
   border-radius: 50px;
   display: block;
@@ -9,8 +9,8 @@
 
 @media screen and (max-width: 768px) {
   .menu__item-signin-text_signin {
-    font-size: 2vw;
-    padding: 7px;
+    font-size: 2.1vw;
+    padding: 1vw 1.5vw;
   }
 }
 

@@ -1,4 +1,5 @@
 @import url(./_succes/popup__content_succes.css);
+@import url(./_mobile-320/popup__content_mobile-320.css);
 
 .popup__content {
   display: flex;

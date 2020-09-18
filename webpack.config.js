@@ -5,7 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const { UnusedFilesWebpackPlugin } = require('unused-files-webpack-plugin');
 const webpack = require('webpack');
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -47,7 +46,7 @@ module.exports = {
           (isDev ? 'style-loader' : {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: './',
+              publicPath: '../',
             },
           }),
           'css-loader',
@@ -62,7 +61,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'style.[contenthash].css',
+      filename: 'style/style.[contenthash].css',
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/i,
@@ -96,6 +95,5 @@ module.exports = {
         },
       ],
     }),
-    new UnusedFilesWebpackPlugin(),
   ],
 };

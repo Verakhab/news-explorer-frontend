@@ -1,14 +1,14 @@
 .header__title {
   position: relative;
-  top: 1.5vw;
+  top: 2vw;
   left: 7.2vw;
-  max-width: 610px;
-  height: 128px;
+  max-width: 35vw;
+  height: 9vw;
   font-family: 'Roboto Slab', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 3vw;
-  line-height: 61px;
+  font-size: 2.96vw;
+  line-height: 3.4vw;
   letter-spacing: -0.1vw;
   margin: 0;
   color: #1A1B22;
@@ -16,11 +16,11 @@
 
 @media screen and (max-width: 768px) {
   .header__title {
-    top: 0.3vw;
+    top: 4vw;
     left: 5.2vw;
     max-width: 396px;
-    font-size: 4vw;
-    line-height: 47px;
+    font-size: 4.1vw;
+    line-height: 4.56vw;
     letter-spacing: -0.1vw;
     margin: 0;
     color: #1A1B22;
@@ -29,9 +29,9 @@
 
 @media screen and (max-width: 320px) {
   .header__title {
-    top: 1.3vw;
+    top: 10.8vw;
     max-width: 286px;
     font-size: 9.5vw;
-    line-height: 36px;
+    line-height: 11vw;
   }
 }

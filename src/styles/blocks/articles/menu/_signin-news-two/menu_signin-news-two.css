@@ -1,16 +1,11 @@
 .menu_signin-news-two {
   max-width: 1440px;
+  display: none;
 }
 
 @media screen and (max-width: 320px) {
   .menu.menu_signin-news-two {
-    width: 4.3vw;
-    height: 0.6vw;
-    position: relative;
-    left: -6.5vw;
-    top: -1vw;
-    margin: 0;
-    background-color: #1A1B22;
-    background-size: 1px 1px;
+    display: block;
+    margin: 0.6vw 6.2vw 0 0;
   }
 }

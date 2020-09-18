@@ -1,30 +1,35 @@
 .result__container {
-  width: 87%;
-  min-height: 282px;
+  max-width: 87vw;
   position: relative;
   top: 3vw;
   left: 7.1vw;
   display: flex;
+  margin-bottom: 6vw;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-start;
-  padding: 1px 0 0 0;
-  margin-bottom: 103px;
+  padding: 0.1vw 0 0 0;
 }
 
 @media screen and (max-width: 768px) {
   .result__container {
-    width: 90%;
-    top: 2.49vw;
-    left: 5.4vw;
-    margin-bottom: 48px;
+    max-width: 92vw;
+    width: 91vw;
+    top: 2.7vw;
+    left: 5.2vw;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .result__container {
+    width: 89vw;
   }
 }
 
 @media screen and (max-width: 320px) {
   .result__container {
       top: 5.1vw;
-      width: 92vw;
+      width: 92%;
       left: 5vw;
       font-size: 9.4vw;
       line-height: 11vw;

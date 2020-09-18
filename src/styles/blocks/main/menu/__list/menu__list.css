@@ -4,7 +4,6 @@
 .menu__list {
   width: 19vw;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
@@ -13,22 +12,19 @@
   line-height: 24px;
   list-style-type: none;
   margin: 0;
-  padding-top: 5px;
-  position: relative;
-  left: 31vw;
+  padding: 0.4vw 7.35vw 0 0;
 }
 
 @media screen and (max-width: 768px) {
   .menu__list {
     font-size: 2.05vw;
-    position: relative;
-    left: 29vw;
-    padding: 0;
+    padding: 0.4vw 7.35vw 0 0;
+    width: 28vw;
   }
 }
 
-/* @media screen and (max-width: 320px) {
+@media screen and (max-width: 410px) {
   .menu__list {
-
+    padding: 0.4vw 12.35vw 0 0;
   }
-} */
+}

@@ -18,9 +18,9 @@
 
 @media screen and (max-width: 320px) {
   .author__foto {
-    top: 12.6vw;
+    top: 11.6vw;
     left: 7.3vw;
     width: 85%;
-    height: 86vw;
+    height: 85vw;
   }
 }

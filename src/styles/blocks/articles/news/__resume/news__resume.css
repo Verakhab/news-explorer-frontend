@@ -12,18 +12,18 @@
 
 @media screen and (max-width: 768px) {
   .news__resume {
-    top: 5.8vw;
-    right: 1vw;
+    top: 6.4vw;
+    right: 0vw;
     font-size: 2.11vw;
-    line-height: 2.5vw;
+    line-height: 2.88vw;
   }
 }
 
 @media screen and (max-width: 320px) {
   .news__resume {
-      top: 24.8vw;
-      right: 3vw;
-      font-size: 5vw;
-      line-height: 6.7vw;
+    top: 30.8vw;
+    right: -3.2vw;
+    font-size: 5vw;
+    line-height: 6.7vw;
   }
 }

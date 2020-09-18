@@ -3,7 +3,10 @@
     color: white;
     border-bottom: 0;
     position: relative;
-    top: 4vw;
+    top: 3vw;
     display: flex;
+    font-size: 5.6vw;
+    left: -1vw;
+    font-weight: 400;
   }
 }

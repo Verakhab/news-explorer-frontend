@@ -1,4 +1,5 @@
 @import url(./_save-news/menu__list_save-news.css);
+@import url(./_mobile/menu__list_mobile.css);
 
 .menu__list {
   width: 270px;
