@@ -1,6 +1,6 @@
 .author__title {
   max-width: 496px;
-  height: 46px;
+  height: 3.25vw;
   font-family: 'Roboto Slab', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -17,6 +17,7 @@
     top: 5.8vw;
     left: 0.2vw;
     margin: 0;
+    height: 6vw;
   }
 }
 
