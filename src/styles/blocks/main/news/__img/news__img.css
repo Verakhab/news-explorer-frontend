@@ -9,13 +9,7 @@
 
 @media screen and (max-width: 768px) {
   .news__img {
-      width: 28.99vw;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .news__img {
-      width: 28.45vw;
+      width: 29vw;
   }
 }
 

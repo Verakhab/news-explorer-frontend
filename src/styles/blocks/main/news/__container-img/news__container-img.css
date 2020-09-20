@@ -6,6 +6,12 @@
 
 @media screen and (max-width: 768px) {
   .news__container-img {
-      height: 150px;
+      height: 19.5vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .news__container-img {
+      height: 47.85vw;
   }
 }

@@ -28,6 +28,12 @@
   }
 }
 
+@media screen and (max-width: 460px) {
+  .news {
+    max-width: 33%;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .news {
     min-height: 441px;
