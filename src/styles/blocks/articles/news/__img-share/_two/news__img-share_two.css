@@ -23,32 +23,27 @@
   opacity: 1;
 }
 
+@media screen and (max-width: 910px) {
+  .news__img-share.news__img-share_two {
+    top: 2.3vw;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .news__img-share.news__img-share_two {
     width: 2.5vw;
-    min-height: 5.3%;
+    height: 5.3%;
     top: 2.3vw;
     right: 2.9vw;
     background-image: url(../../../../../../images/ящик.jpg);
-  }
-
-  .news__img-share.news__img-share_two:hover {
-    cursor: pointer;
-    opacity: 1;
-  }
-
-  .news__img-share.news__img-share_two:focus {
-    outline: none;
-    background-image: url(../../../../../../images/ящик.jpg);
-    opacity: 1;
   }
 }
 
 @media screen and (max-width: 320px) {
   .news__img-share.news__img-share_two {
     min-height: 5.9%;
-    top: 7.4vw;
-    right: 8.6vw;
+    top: 7.2vw;
+    right: 8.3vw;
     width: 5.5vw;
   }
 }

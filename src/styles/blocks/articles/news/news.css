@@ -21,10 +21,10 @@
 
 @media screen and (max-width: 768px) {
   .news {
-    min-height: 420px;
-    max-width: 32.465%;
-    margin-right: 6px;
-    margin-top: 11px;
+    min-height: 54.5vw;
+    width: 29vw;
+    margin-right: 1.12vw;
+    margin-top: 1.4vw;
   }
 }
 
@@ -32,8 +32,9 @@
   .news {
     min-height: 441px;
     max-width: 98%;
+    width: 90vw;
     margin-right: 6px;
-    margin-top: 18.72px;
+    margin-top: 11px;
     top: -5vw;
     border-top-right-radius: 4.3vw;
     border-top-left-radius: 4.3vw;

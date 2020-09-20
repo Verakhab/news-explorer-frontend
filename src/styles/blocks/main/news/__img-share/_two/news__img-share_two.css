@@ -30,6 +30,12 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  .news__img-share.news__img-share_two {
+    min-height: 4.3%;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .news__img-share.news__img-share_two {
     min-height: 4%;

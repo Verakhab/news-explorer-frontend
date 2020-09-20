@@ -14,6 +14,12 @@
   z-index: 3;
 }
 
+@media screen and (max-width: 910px) {
+  .news__img-share.news__img-share_about-text {
+    top: 2.4vw;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .news__img-share.news__img-share_about-text {
     display: none;

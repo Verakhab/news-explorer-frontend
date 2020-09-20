@@ -5,3 +5,9 @@
   padding: 1.3vw 1.7vw;
   height: 18vw;
 }
+
+@media screen and (max-width: 768px) {
+  .news__about {
+    height: 30vw;
+  }
+}
