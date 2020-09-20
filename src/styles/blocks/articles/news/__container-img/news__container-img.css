@@ -10,6 +10,12 @@
   }
 }
 
+@media screen and (max-width: 460px) {
+  .news__container-img {
+      height: 28.5vw;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .news__container-img {
     height: 47.85vw;

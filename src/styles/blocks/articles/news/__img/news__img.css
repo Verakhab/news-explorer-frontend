@@ -13,6 +13,14 @@
   }
 }
 
+@media screen and (max-width: 460px) {
+  .news__img {
+    width: 44.086vw;
+    border-top-right-radius: 3.3vw;
+    border-top-left-radius: 3.3vw;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .news__img {
     width: 311.3%;

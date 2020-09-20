@@ -19,7 +19,6 @@
 
 .news__img-share.news__img-share_two:focus {
   outline: none;
-  background-image: url(../../../../../../images/ящик.jpg);
   opacity: 1;
 }
 
@@ -35,7 +34,15 @@
     height: 5.3%;
     top: 2.3vw;
     right: 2.9vw;
-    background-image: url(../../../../../../images/ящик.jpg);
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .news__img-share.news__img-share_two {
+    width: 5%;
+    min-height: 4.5%;
+    top: 4.3vw;
+    right: 4.79vw;
   }
 }
 

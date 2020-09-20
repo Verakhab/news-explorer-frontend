@@ -20,6 +20,14 @@
   }
 }
 
+@media screen and (max-width: 460px) {
+  .news__author {
+    top: 11.2vw;
+    font-size: 2.11vw;
+    height: 2vw;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .news__author {
     top: 42.2vw;

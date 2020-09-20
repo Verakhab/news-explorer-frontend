@@ -18,6 +18,14 @@
   }
 }
 
+@media screen and (max-width: 460px) {
+  .news__img-share {
+      width: 13%;
+      top: 3vw;
+      right: 3vw;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .news__img-share {
     width: 14%;

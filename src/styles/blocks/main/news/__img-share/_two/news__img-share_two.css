@@ -39,6 +39,15 @@
   }
 }
 
+@media screen and (max-width: 460px) {
+  .news__img-share.news__img-share_two {
+    width: 5%;
+    min-height: 4.5%;
+    top: 4.6vw;
+    right: 4.82vw;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .news__img-share.news__img-share_two {
     min-height: 4%;

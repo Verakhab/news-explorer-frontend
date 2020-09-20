@@ -11,3 +11,9 @@
     height: 30vw;
   }
 }
+
+@media screen and (max-width: 460px) {
+  .news__about {
+    padding: 2vw 2.5vw;
+  }
+}
