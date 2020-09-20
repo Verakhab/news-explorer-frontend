@@ -23,6 +23,15 @@
   }
 }
 
+@media screen and (max-width: 590px) {
+  .news__img-share.news__img-share_about-text {
+    width: 55%;
+    top: 2.9vw;
+    left: 6.1vw;
+    font-size: 0.99vw;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .news__img-share.news__img-share_about-text {
     width: 55%;
