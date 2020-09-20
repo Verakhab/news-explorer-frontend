@@ -32,6 +32,8 @@
   .news {
     max-width: 48.7%;
     width: 81vw;
+    border-top-right-radius: 3.3vw;
+    border-top-left-radius: 3.3vw;
   }
 }
 

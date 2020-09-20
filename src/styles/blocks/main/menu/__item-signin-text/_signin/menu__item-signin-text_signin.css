@@ -4,7 +4,7 @@
   padding: 0.8vw 1.5vw;
   border: 1px solid  rgba(255, 255, 255);
   border-radius: 50px;
-  display: block;
+  display: flex;
 }
 
 @media screen and (max-width: 830px) {
@@ -22,7 +22,10 @@
 
 @media screen and (max-width: 500px) {
   .menu__item-signin-text_signin {
-    padding: 0.2vw 1.5vw;
+    padding: 0 1.5vw;
+    height: 5vw;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 

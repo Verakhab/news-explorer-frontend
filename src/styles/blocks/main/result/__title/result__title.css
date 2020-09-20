@@ -19,6 +19,12 @@
   }
 }
 
+@media screen and (max-width: 460px) {
+  .result__title {
+    margin: 1.2vw 0 3.39vw 0;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .result__title {
     top: 8.1vw;
