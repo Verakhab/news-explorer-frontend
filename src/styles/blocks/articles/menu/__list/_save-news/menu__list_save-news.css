@@ -1,0 +1,25 @@
+.menu__list.menu__list_save-news {
+  width: 29.2vw;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.24vw;
+  line-height: 1vw;
+  list-style-type: none;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .menu__list.menu__list_save-news {
+    font-size: 2.05vw;
+    width: 46vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .menu__list.menu__list_save-news {
+    display: none;
+  }
+}

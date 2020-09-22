@@ -1,0 +1,51 @@
+@import url(./__img/news__img.css);
+@import url(./__img-share/news__img-share.css);
+@import url(./__container-img/news__container-img.css);
+@import url(./__about/news__about.css);
+@import url(./__date/news__date.css);
+@import url(./__title/news__title.css);
+@import url(./__resume/news__resume.css);
+@import url(./__author/news__author.css);
+
+.news {
+  max-width: 32%;
+  min-height: 40vw;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1vw;
+  position: relative;
+  margin-top: 1.1vw;
+  border-radius: 1.2vw;
+  background-color: #FFFFFF;
+}
+
+@media screen and (max-width: 768px) {
+  .news {
+    min-height: 54.5vw;
+    width: 29vw;
+    margin-right: 1.12vw;
+    margin-top: 1.4vw;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .news {
+    max-width: 48.7%;
+    width: 81vw;
+    border-top-right-radius: 3.3vw;
+    border-top-left-radius: 3.3vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .news {
+    min-height: 441px;
+    max-width: 98%;
+    width: 90vw;
+    margin-right: 6px;
+    margin-top: 11px;
+    top: -5vw;
+    border-top-right-radius: 4.3vw;
+    border-top-left-radius: 4.3vw;
+  }
+}

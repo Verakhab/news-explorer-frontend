@@ -1,0 +1,32 @@
+.header__subtitle {
+  left: 7.3vw;
+  position: relative;
+  max-width: 545px;
+  top: 1.55vw;
+  min-height: 1vw;
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25vw;
+  line-height: 1.9vw;
+  color: #1A1B22;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .header__subtitle {
+    left: 5.3vw;
+    top: 6.9vw;
+    font-size: 1.83vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header__subtitle {
+    left: 4.9vw;
+    top: 38.3vw;
+    font-size: 5.62vw;
+    line-height: 7.6vw;
+    width: 89vw;
+  }
+}

@@ -1,0 +1,38 @@
+.header__input {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 4.346789vw;
+  border: 0;
+  border-radius: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  font-size: 14px;
+  line-height: 17px;
+  box-sizing: border-box;
+  padding-left: 25px;
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1vw;
+  z-index: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .header__input {
+    width: 84%;
+    height: 7.4vw;
+    left: 1.2vw;
+    top: 12.06vw;
+    font-size: 2.1vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header__input {
+    width: 89.1vw;
+    height: 17.5vw;
+    left: 0;
+    top: 82.5vw;
+    font-size: 4.5vw;
+  }
+}

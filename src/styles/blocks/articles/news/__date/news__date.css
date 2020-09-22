@@ -1,0 +1,26 @@
+.news__date {
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5vw;
+  line-height: 1vw;
+  color: #B6BCBF;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .news__date {
+    position: relative;
+    top: 1.77vw;
+    left: 0.2vw;
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .news__date {
+    top: 21.8vw;
+    left: 2.2vw;
+    font-size: 5vw;
+  }
+}

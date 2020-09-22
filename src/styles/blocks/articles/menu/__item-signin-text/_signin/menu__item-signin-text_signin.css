@@ -1,0 +1,24 @@
+.menu__item-signin-text_signin {
+  text-decoration: none;
+  border: 0;
+  padding: 0 0 1.7vw;
+  border-bottom: 0.2vw solid #1A1B22;
+  border-radius: 0;
+  margin: 0;
+  position: relative;
+  font-size: 1.25vw;
+}
+
+@media screen and (max-width: 768px) {
+  .menu__item-signin-text_signin {
+    font-size: 2.1vw;
+    padding: 0 0vw 2.5vw 0;
+    border-bottom: 0.4vw solid #1A1B22;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .menu__item-signin-text_signin {
+    display: none;
+  }
+}

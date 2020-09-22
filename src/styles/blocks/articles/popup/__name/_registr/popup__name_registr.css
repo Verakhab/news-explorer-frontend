@@ -1,0 +1,12 @@
+.popup__name_registr {
+  position: relative;
+  top: 8vw;
+  left: 6.5vw;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1vw;
+  line-height: 1vw;
+  color: #000000;
+  text-decoration: none;
+}

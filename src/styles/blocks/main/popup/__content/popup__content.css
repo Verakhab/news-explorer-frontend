@@ -1,0 +1,36 @@
+@import url(./_reg/popup__content_reg.css);
+@import url(./_succes/popup__content_succes.css);
+
+.popup__content {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  min-height: 380px;
+  background-color: #fff;
+  border-radius: 15px;
+  position: relative;
+  top: 0.7vw;
+  left: 35vw;
+  box-sizing: border-box;
+  padding: 34px 36px;
+}
+
+@media screen and (max-width: 768px) {
+  .popup__content {
+    width: 56vw;
+    top: -0.3vw;
+    left: 22vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .popup__content {
+    width: 100vw;
+    top: 6.8vw;
+    left: 0vw;
+    min-height: 160vw;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-left: 6vw;
+  }
+}

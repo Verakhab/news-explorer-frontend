@@ -1,0 +1,34 @@
+@import url(./__menu/header__menu.css);
+@import url(./__main/header__main.css);
+@import url(./__title/header__title.css);
+@import url(./__subtitle/header__subtitle.css);
+@import url(./__save-text/header__save-text.css);
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Roboto Slab', 'Arial', 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.33vw;
+  min-height: 26vw;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    font-size: 2.6vw;
+    height: 35.1vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+    font-size: 4.8vw;
+    height: 95.7vw;
+  }
+}

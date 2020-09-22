@@ -1,0 +1,6 @@
+@media screen and (max-width: 320px) {
+  .footer__list-item_yap {
+    position: absolute;
+    top: 15vw;
+  }
+}

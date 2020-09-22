@@ -1,0 +1,42 @@
+.menu__item-signin-text_signin {
+  text-decoration: none;
+  color: white;
+  padding: 0.8vw 1.5vw;
+  border: 1px solid  rgba(255, 255, 255);
+  border-radius: 50px;
+  display: flex;
+}
+
+@media screen and (max-width: 830px) {
+  .menu__item-signin-text_signin {
+    padding: 0.4vw 1.5vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu__item-signin-text_signin {
+    font-size: 2.1vw;
+    padding: 1vw 1.5vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .menu__item-signin-text_signin {
+    padding: 0 1.5vw;
+    height: 5vw;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .menu__item-signin-text_signin {
+    padding: 0 1.5vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .menu__item-signin-text_signin {
+    display: none;
+  }
+}

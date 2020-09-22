@@ -1,0 +1,11 @@
+.menu_signin-news-two {
+  max-width: 1440px;
+  display: none;
+}
+
+@media screen and (max-width: 320px) {
+  .menu.menu_signin-news-two {
+    display: block;
+    margin: 0.6vw 6.2vw 0 0;
+  }
+}

@@ -1,0 +1,10 @@
+@media screen and (max-width: 320px) {
+  .menu__item-main-text.menu__item-main-text_mobile-two {
+    position: absolute;
+    border-bottom: 0;
+    top: 21.4vw;
+    right: -49vw;
+    width: 55vw;
+    display: flex;
+  }
+}

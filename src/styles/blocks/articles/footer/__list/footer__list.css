@@ -1,0 +1,39 @@
+@import url(./__list-item_yap/footer__list-item_yap.css);
+@import url(./__list-item_git/footer__list-item_git.css);
+
+.footer__list {
+  width: 27vw;
+  height: 1vw;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  top: 3.8vw;
+  right: 108px;
+  list-style-type: none;
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2vw;
+  margin: 0;
+  line-height: 1.5vw;
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__list {
+    width: 45vw;
+    top: 3.7vw;
+    right: 6vw;
+    font-size: 2.4vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .footer__list {
+      width: 86vw;
+      top: -44.5vw;
+      right: -16px;
+      font-size: 5.2vw;
+  }
+}

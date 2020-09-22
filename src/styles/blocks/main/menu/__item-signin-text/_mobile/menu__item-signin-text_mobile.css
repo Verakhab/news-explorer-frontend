@@ -1,0 +1,14 @@
+@media screen and (max-width: 320px) {
+  .menu__item-signin-text.menu__item-signin-text_mobile {
+    color: white;
+    position: absolute;
+    top: 63.7vw;
+    left: 5vw;
+    width: 80vw;
+    justify-content: center;
+    text-align: center;
+    font-size: 5.6vw;
+    display: flex;
+    font-weight: 400;
+  }
+}

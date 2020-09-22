@@ -1,0 +1,19 @@
+.news__about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.3vw 1.7vw;
+  height: 18vw;
+}
+
+@media screen and (max-width: 768px) {
+  .news__about {
+    height: 30vw;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .news__about {
+    padding: 2vw 2.5vw;
+  }
+}

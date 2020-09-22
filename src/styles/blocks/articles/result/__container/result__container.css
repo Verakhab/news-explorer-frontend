@@ -1,0 +1,37 @@
+.result__container {
+  max-width: 87vw;
+  position: relative;
+  top: 3vw;
+  left: 7.1vw;
+  display: flex;
+  margin-bottom: 6vw;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0.1vw 0 0 0;
+}
+
+@media screen and (max-width: 768px) {
+  .result__container {
+    max-width: 92vw;
+    width: 91vw;
+    top: 2.7vw;
+    left: 5.2vw;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .result__container {
+    width: 89vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .result__container {
+      top: 5.1vw;
+      width: 92%;
+      left: 5vw;
+      font-size: 9.4vw;
+      line-height: 11vw;
+  }
+}

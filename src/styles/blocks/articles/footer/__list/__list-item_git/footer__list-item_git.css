@@ -1,0 +1,7 @@
+@media screen and (max-width: 320px) {
+  .footer__list-item_git {
+    position: absolute;
+    top: -2.5vw;
+    right: 11.6vw;
+  }
+}

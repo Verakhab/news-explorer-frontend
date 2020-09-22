@@ -1,0 +1,11 @@
+@import url(./_edit/popup__close_edit.css);
+@import url(./_ava/popup__close_ava.css);
+@import url(./_mobile/popup__close_mobile.css);
+
+.popup__close {
+  width: 26px;
+  position: absolute;
+  top: -38px;
+  right: -40px;
+  cursor: pointer;
+}

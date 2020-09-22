@@ -1,0 +1,31 @@
+.news__img {
+  position: relative;
+  width: 312.3%;
+  height: 100%;
+  border-top-right-radius: 1.3vw;
+  border-top-left-radius: 1.3vw;
+  z-index: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .news__img {
+      width: 29vw;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .news__img {
+    width: 43.4vw;
+    border-top-right-radius: 3.3vw;
+    border-top-left-radius: 3.3vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .news__img {
+    width: 313%;
+    height: 61vw;
+    border-top-right-radius: 4.5vw;
+    border-top-left-radius: 4.5vw;
+  }
+}

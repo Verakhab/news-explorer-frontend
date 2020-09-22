@@ -1,0 +1,29 @@
+.news__title {
+  position: relative;
+  top: 1.5vw;
+  font-family: 'Roboto Slab', 'Arial', 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.8vw;
+  line-height: 2vw;
+  color: #1A1B22;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .news__title {
+    top: 4.8vw;
+    left: 0.2vw;
+    font-size: 2.88vw;
+    line-height: 3vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .news__title {
+    top: 27.8vw;
+    left: 3.2vw;
+    font-size: 7.1vw;
+    line-height: 8.7vw;
+  }
+}

@@ -1,0 +1,49 @@
+.popup__button.popup__button_result {
+  width: 20%;
+  position: relative;
+  top: 0;
+  margin-top: 9.7vw;
+  margin-bottom: 5.5vw;
+  align-self: center;
+  background-color: #FFFFFF;
+  font-size: 1.22vw;
+  line-height: 1vw;
+  height: 4.6vw;
+}
+
+.popup__button.popup__button_result:hover {
+  cursor: pointer;
+  background-color: #E6E8EB;
+  color: #1A1B22;
+}
+
+.popup__button.popup__button_result:active, button:focus {
+  outline: none;
+  background-color: #d7dadf;
+  color: #B6BCBF;
+}
+
+.popup__button.popup__button_result:-moz-focus-inner {
+  border: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .popup__button.popup__button_result {
+    width: 31%;
+    height: 7vw;
+    left: 1vw;
+    font-size: 2.4vw;
+    margin-top: 2.2vw;
+    margin-bottom: 5.5vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .popup__button.popup__button_result {
+    width: 90%;
+    height: 16vw;
+    top: -4vw;
+    left: 0vw;
+    font-size: 5.7vw;
+  }
+}

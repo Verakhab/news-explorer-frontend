@@ -1,0 +1,35 @@
+.header__title {
+  position: relative;
+  top: 0.3vw;
+  max-width: 42.3vw;
+  height: 9.1vw;
+  font-family: 'Roboto Slab', 'Arial', 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 4.19vw;
+  line-height: 4.4vw;
+  margin-bottom: 2.3vw;
+}
+
+
+@media screen and (max-width: 768px) {
+  .header__title {
+    top: -0.5vw;
+    left: 1.7vw;
+    max-width: 392px;
+    font-size: 4.67vw;
+    line-height: 5.4vw;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header__title {
+    top: 4.1vw;
+    left: 0.2vw;
+    max-width: 267px;
+    font-size: 11.1vw;
+    line-height: 41px;
+    margin: 0;
+  }
+}

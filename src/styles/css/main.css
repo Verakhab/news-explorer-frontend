@@ -1,0 +1,17 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts/fonts.css);
+@import url(../blocks/main/root/root.css);
+@import url(../blocks/main/header/header.css);
+@import url(../blocks/main/menu/menu.css);
+@import url(../blocks/main/logo/logo.css);
+@import url(../blocks/main/content/content.css);
+@import url(../blocks/main/author/author.css);
+@import url(../blocks/main/footer/footer.css);
+@import url(../blocks/main/popup/popup.css);
+@import url(../blocks/main/result/result.css);
+@import url(../blocks/main/news/news.css);
+@import url(../blocks/main/preloader-block/preloader-block.css);
+
+html, body {
+  overflow: visible;
+}

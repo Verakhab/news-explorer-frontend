@@ -1,0 +1,30 @@
+.author__about {
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.249vw;
+  line-height: 1.7vw;
+  margin-top: 0;
+  margin-bottom: 1.8vw;
+}
+
+@media screen and (max-width: 768px) {
+  .author__about {
+    top: 5.1vw;
+    position: relative;
+    line-height: 3.2vw;
+    font-size: 2.35vw;
+    margin-bottom: 3.3vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .author__about {
+    top: 23vw;
+    width: 167%;
+    font-size: 5.65vw;
+    left: -4.4vw;
+    line-height: 7.8vw;
+    margin-bottom: 7.3vw;
+  }
+}

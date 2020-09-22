@@ -1,0 +1,10 @@
+@media screen and (max-width: 320px) {
+  .popup__close.popup__close_mobile {
+    width: 14px;
+    position: absolute;
+    top: 19px;
+    right: 21px;
+    cursor: pointer;
+    color: white;
+  }
+}

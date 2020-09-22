@@ -1,0 +1,30 @@
+@import url(./_save-news/menu__list_save-news.css);
+@import url(./_mobile/menu__list_mobile.css);
+
+.menu__list {
+  width: 19vw;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2vw;
+  line-height: 24px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0.4vw 7.35vw 0 0;
+}
+
+@media screen and (max-width: 768px) {
+  .menu__list {
+    font-size: 2.05vw;
+    padding: 0.4vw 7.35vw 0 0;
+    width: 28vw;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .menu__list {
+    padding: 0.4vw 7.35vw 0 0;
+  }
+}
