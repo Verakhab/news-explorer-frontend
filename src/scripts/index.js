@@ -1,3 +1,2 @@
 import '../styles/css/main.css';
-
-alert('hello word');
+import Header from './components/Header';

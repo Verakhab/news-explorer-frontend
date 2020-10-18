@@ -2,5 +2,8 @@
   "rules": {
     "no-underscore-dangle": ["error", { "allowAfterThis": true }]
   },
-  "extends": "airbnb-base"
+  "extends": "airbnb-base",
+  "globals": {
+    "document": false
+  }
 }

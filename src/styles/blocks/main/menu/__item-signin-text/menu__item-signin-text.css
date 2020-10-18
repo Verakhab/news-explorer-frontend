@@ -3,7 +3,7 @@
 .menu__item-signin-text {
   text-decoration: none;
   color: white;
-  padding: 15px;
+  padding: 1.2vw;
   border: 1px solid  rgba(255, 255, 255);
   border-radius: 50px;
   font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
@@ -11,4 +11,17 @@
   font-weight: 500;
   font-size: 1.2vw;
   line-height: 2.5vw;
+}
+
+@media screen and (max-width: 768px) {
+  .menu__item-signin-text {
+    padding: 2vw;
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .menu__item-signin-text {
+    display: none;
+  }
 }
