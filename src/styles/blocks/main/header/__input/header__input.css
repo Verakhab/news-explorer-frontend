@@ -15,6 +15,7 @@
   font-weight: normal;
   font-size: 1.1vw;
   z-index: 0;
+  outline: none;
 }
 
 @media screen and (max-width: 768px) {

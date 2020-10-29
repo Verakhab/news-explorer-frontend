@@ -1,0 +1,12 @@
+.popup__content.popup__content_error {
+  top: -1.1vw;
+  min-height: 182px;
+  padding: 8vw 7vw;
+}
+
+@media screen and (max-width: 768px) {
+  .popup__content.popup__content_error {
+    top: -13.2vw;
+    padding: 10vw 13vw;
+  }
+}

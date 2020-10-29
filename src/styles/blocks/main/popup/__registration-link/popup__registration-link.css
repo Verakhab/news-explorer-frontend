@@ -1,3 +1,5 @@
+@import url(./_in/popup__registration-link_in.css);
+
 .popup__registration-link {
   color: #2F71E5;
   text-decoration: none;

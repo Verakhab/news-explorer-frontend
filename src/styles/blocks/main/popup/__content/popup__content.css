@@ -1,5 +1,6 @@
 @import url(./_reg/popup__content_reg.css);
 @import url(./_succes/popup__content_succes.css);
+@import url(./_error/popup__content_error.css);
 
 .popup__content {
   display: flex;

@@ -24,7 +24,7 @@
               class="menu__item-main">
               <a
                 class="menu__item-main-text"
-                href="./index.html">
+                href="#">
                 Главная
               </a>
             </li>
@@ -48,12 +48,12 @@
         </div>
         <div class="menu menu_save-news">
           <ul class="menu__list menu__list_save-news">
-            <li class="menu__item-main"><a class="menu__item-main-text" href="#">Главная</a></li>
+            <li class="menu__item-main menu__item-main_two"><a class="menu__item-main-text" href="#">Главная</a></li>
             <li
               class="menu__item-main menu__item-main_save">
               <a
                 class="menu__item-main-text menu__item-main-text_save"
-                href="./articles.html">Сохраненные статьи
+                href="#">Сохраненные статьи
               </a>
             </li>
             <li class="menu__item-signin"><a class="menu__item-signin-text menu__item-signin-text_signin" href="#">Грета [-></a></li>
@@ -232,22 +232,31 @@
         <div class="popup__content">
           <img src="./images/close.svg" alt="icon close" class="popup__close">
           <h3 class="popup__title">Вход</h3>
-          <form class="popup__form" name="signin">
+          <form class="popup__form-signin" novalidate name="signin">
               <span class="popup__name popup__name_email-signin">Email</span>
               <input
                 type="email"
+                required
+                minlength="2"
+                maxlength="30"
                 name="email"
                 class="popup__input popup__input_email"
                 placeholder="Введите почту"
               >
-              <span class="popup__error popup__error_signin">Неправильный формат email</span>
+              <span class="popup__error popup__error_signin-email">Неправильный формат email</span>
               <span class="popup__name popup__name_password-signin">Пароль</span>
               <input
                 type="password"
-                name="pass" class="popup__input popup__input_pass"
+                required
+                minlength="2"
+                maxlength="30"
+                name="pass"
+                class="popup__input popup__input_pass"
                 placeholder="Введите пароль"
               >
-              <button class="button popup__button">Войти</button>
+              <span class="popup__error popup__error_signin-pass">Неправильный формат пароля</span>
+              <span class="popup__error popup__error_signin-form">Неправильный формат пароля</span>
+              <button type="submit" class="button popup__button" disabled = 'true'>Войти</button>
               <span
                 class="popup__name_registr">или
                 <a
@@ -262,9 +271,13 @@
         <div class="popup__content popup__content_reg">
           <img src="./images/close.svg" alt="icon close" class="popup__close">
           <h3 class="popup__title">Регистрация</h3>
-          <form class="popup__form" name="reg">
+          <form class="popup__form-reg" novalidate name="reg">
               <span class="popup__name popup__name_email-reg">Email</span>
-              <input type="email"
+              <input
+                type="email"
+                required
+                minlength="2"
+                maxlength="30"
                 name="email"
                 class="popup__input popup__input_email-reg"
                 placeholder="Введите почту"
@@ -273,6 +286,9 @@
               <span class="popup__name popup__name_password-reg">Пароль</span>
               <input
                 type="password"
+                required
+                minlength="2"
+                maxlength="30"
                 name="pass"
                 class="popup__input popup__input_pass-reg"
                 placeholder="Введите пароль"
@@ -281,16 +297,20 @@
               <span class="popup__name popup__name_name">Имя</span>
               <input
                 type="text"
+                required
+                minlength="2"
+                maxlength="30"
                 name="name"
                 class="popup__input popup__input_name"
                 placeholder="Введите своё имя"
               >
+              <span class="popup__error popup__error_name-reg">Такой пользователь уже есть</span>
               <span class="popup__error popup__error_user-is">Такой пользователь уже есть</span>
-              <button class="button popup__button popup__button_reg">Зарегистрироваться</button>
+              <button type="submit" class="button popup__button popup__button_reg" disabled = 'true'>Зарегистрироваться</button>
               <span
                 class="popup__name_signin">или
                 <a
-                  class="popup__registration-link"
+                  class="popup__registration-link_in"
                   href="#">Войти
                 </a>
               </span>
@@ -304,6 +324,12 @@
           <a class="popup__registration-succes" href="#">Выполнить вход</a>
         </div>
       </div>
+      <div class="popup popup_error-block">
+        <div class="popup__content popup__content_error">
+          <img src="./images/close.svg" alt="icon close" class="popup__close">
+          <h3 class="popup__title">Произошла ошибка</h3>
+        </div>
+      </div>
       <div class="popup popup_mobile-320">
         <div class="popup__content popup__content_mobile-320">
           <img src="./images/close.svg" alt="icon close" class="popup__close popup__close_mobile">
@@ -313,7 +339,7 @@
               class="menu__item-main">
               <a
                 class="menu__item-main-text menu__item-main-text_mobile"
-                href="./index.html">
+                href="#">
                   Главная
               </a>
             </li>
@@ -326,7 +352,7 @@
               </a>
             </li>
             <li
-              class="menu__item-signin">
+              class="menu__item-signin menu__item-signin_mobile">
               <a
                 class="menu__item-signin-text menu__item-signin-text_mobile"
                 href="#">

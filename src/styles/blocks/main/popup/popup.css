@@ -17,6 +17,11 @@
 @import url(./__registration-succes/popup__registration-succes.css);
 @import url(./__error/popup__error.css);
 @import url(./__content/_mobile-320/popup__content_mobile-320.css);
+@import url(./_mobile-320/popup_mobile-320.css);
+@import url(./_welcome-block/popup_welcome-block.css);
+@import url(./_signin-block/popup_signin-block.css);
+@import url(./_reg-block/popup_reg-block.css);
+@import url(./_error-block/popup_error-block.css);
 
 .popup {
   position: fixed;
@@ -25,7 +30,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, .5);
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: flex-start;
   z-index: 4;

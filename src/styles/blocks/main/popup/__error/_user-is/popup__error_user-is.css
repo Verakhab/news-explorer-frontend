@@ -1,9 +1,16 @@
 .popup__error.popup__error_user-is {
-  top: 310px;
-  left: 130px;
+  top: 321px;
+  left: 198px;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 15px;
   text-align: center;
+}
+
+@media screen and (max-width: 320px) {
+  .popup__error.popup__error_user-is {
+    top: 263px;
+    left: 145px;
+  }
 }
