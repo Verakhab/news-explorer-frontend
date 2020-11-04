@@ -1,11 +1,18 @@
 import BaseComponent from './BaseComponent';
 import validButton from '../utils/validButton';
+import MainApi from '../api/MainApi';
 
 const root = document.querySelector('.root');
+const popupSignIn = root.querySelector('.popup_signin-block');
+const popupWelcome = root.querySelector('.popup_welcome-block');
+const popupReg = root.querySelector('.popup_reg-block');
 
 export default class Form extends BaseComponent {
   constructor() {
     super();
+    this.popupSignIn = popupSignIn;
+    this.popupReg = popupReg;
+    this.popupWelcome = popupWelcome;
     this._validatorForm = this._validatorForm.bind(this);
     this._setEventListeners();
   }
@@ -70,18 +77,29 @@ export default class Form extends BaseComponent {
 
   _getInfo() {
     const formSignIn = document.forms.signin;
-    const emailSignIn = formSignIn.elements.email.value;
-    const passSignIn = formSignIn.elements.pass.value;
+    const emailSignIn = formSignIn.elements.email;
+    const passSignIn = formSignIn.elements.pass;
     const formSignUp = document.forms.reg;
-    const emailSignUp = formSignUp.elements.email.value;
-    const passSignUp = formSignUp.elements.pass.value;
-    const nameSignUp = formSignUp.elements.name.value;
-    return emailSignIn, passSignIn, emailSignUp, passSignUp, nameSignUp;
+    const emailSignUp = formSignUp.elements.email;
+    const passSignUp = formSignUp.elements.pass;
+    const nameSignUp = formSignUp.elements.name;
+    return emailSignIn.value,
+      passSignIn.value,
+      emailSignUp.value,
+      passSignUp.value,
+      nameSignUp.value;
   }
 
   _setEventListeners() {
+    const formSignIn = document.forms.signin;
+    const emailSignIn = formSignIn.elements.email;
+    const passSignIn = formSignIn.elements.pass;
+    const formSignUp = document.forms.reg;
+    const emailSignUp = formSignUp.elements.email;
+    const passSignUp = formSignUp.elements.pass;
+    const nameSignUp = formSignUp.elements.name;
     const formSigninInput = {
-      element: document.querySelector('.popup__form-signin'),
+      element: root.querySelector('.popup__form-signin'),
       eventType: 'input',
       callback: (e) => {
         if (e.target.classList.contains('popup__input_email')
@@ -91,7 +109,7 @@ export default class Form extends BaseComponent {
       },
     };
     const formSignUpInput = {
-      element: document.querySelector('.popup__form-reg'),
+      element: root.querySelector('.popup__form-reg'),
       eventType: 'input',
       callback: (e) => {
         if (e.target.classList.contains('popup__input_email-reg')
@@ -101,7 +119,59 @@ export default class Form extends BaseComponent {
         }
       },
     };
-    this._listeners.push(formSigninInput, formSignUpInput);
+    const formSignUpButton = {
+      element: root.querySelector('.popup__button_reg'),
+      eventType: 'click',
+      callback: (e) => {
+        e.preventDefault();
+        root.querySelector('.popup__button_reg').textContent = 'Загрузка...';
+        const dataUser = {
+          email: emailSignUp.value,
+          password: passSignUp.value,
+          name: nameSignUp.value,
+        };
+        const dataUserJson = JSON.stringify(dataUser);
+        new MainApi('http://api.web.students.nomoreparties.co/signup')
+          .signUp(dataUserJson)
+          .then((res) => {
+            if (!res.message) {
+              root.querySelector('.popup__button_reg').textContent = 'Зарегистрироваться';
+              this.popupReg.setAttribute('style', 'display: none');
+              this.popupWelcome.setAttribute('style', 'display: flex');
+              return console.log(res);
+            }
+            root.querySelector('.popup__button_reg').textContent = 'Зарегистрироваться';
+            return Promise.reject(res.message);
+          });
+      },
+    };
+    const formSignIpButton = {
+      element: root.querySelector('.popup__button_signin'),
+      eventType: 'click',
+      callback: (e) => {
+        e.preventDefault();
+        root.querySelector('.popup__button_signin').textContent = 'Загрузка...';
+        const dataUser = {
+          email: emailSignIn.value,
+          password: passSignIn.value,
+        };
+        const dataUserJson = JSON.stringify(dataUser);
+        new MainApi('http://api.web.students.nomoreparties.co/signin')
+          .signIn(dataUserJson)
+          .then((res) => {
+            if (!res) {
+              root.querySelector('.popup__button_signin').textContent = 'Войти';
+              this.popupSignIn.setAttribute('style', 'display: none');
+              this.token = res;
+
+              return this.token;
+            }
+            root.querySelector('.popup__button_signin').textContent = 'Войти';
+            return Promise.reject(res);
+          });
+      },
+    };
+    this._listeners.push(formSigninInput, formSignUpInput, formSignUpButton, formSignIpButton);
     this._setListener(this._listeners);
   }
 }
