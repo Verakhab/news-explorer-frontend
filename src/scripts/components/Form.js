@@ -124,6 +124,8 @@ export default class Form extends BaseComponent {
       eventType: 'click',
       callback: (e) => {
         e.preventDefault();
+        const serverUrl = process.env.NODE_ENV === 'development'
+          ? 'http://api.web.students.nomoreparties.co/' : 'https://api.web.students.nomoreparties.co/';
         root.querySelector('.popup__button_reg').textContent = 'Загрузка...';
         const dataUser = {
           email: emailSignUp.value,
@@ -131,7 +133,7 @@ export default class Form extends BaseComponent {
           name: nameSignUp.value,
         };
         const dataUserJson = JSON.stringify(dataUser);
-        new MainApi('http://api.web.students.nomoreparties.co/signup')
+        new MainApi(`${serverUrl}signup`)
           .signUp(dataUserJson)
           .then((res) => {
             if (!res.message) {
@@ -150,20 +152,22 @@ export default class Form extends BaseComponent {
       eventType: 'click',
       callback: (e) => {
         e.preventDefault();
+        const serverUrl = process.env.NODE_ENV === 'development'
+          ? 'https://api.web.students.nomoreparties.co/' : 'https://api.web.students.nomoreparties.co/';
         root.querySelector('.popup__button_signin').textContent = 'Загрузка...';
         const dataUser = {
           email: emailSignIn.value,
           password: passSignIn.value,
         };
         const dataUserJson = JSON.stringify(dataUser);
-        new MainApi('http://api.web.students.nomoreparties.co/signin')
+        new MainApi(`${serverUrl}signin`)
           .signIn(dataUserJson)
           .then((res) => {
             if (!res) {
               root.querySelector('.popup__button_signin').textContent = 'Войти';
               this.popupSignIn.setAttribute('style', 'display: none');
               this.token = res;
-
+              new MainApi(`${serverUrl}users/me`).getUserInfo();
               return this.token;
             }
             root.querySelector('.popup__button_signin').textContent = 'Войти';

@@ -7,7 +7,8 @@ export default class MainApi {
   async getUserInfo() {
     try {
       const res = await fetch(this.url, {
-        credentials: 'include',
+        method: 'GET',
+        // credentials: 'include',
       });
       return await console.log(res.json());
     } catch (err) {
@@ -23,6 +24,7 @@ export default class MainApi {
     try {
       const res = await fetch(this.url, {
         method: 'POST',
+        // credentials: 'include',
         headers: {
           'Content-Type': 'application/json',
         },
