@@ -124,9 +124,8 @@ export default class Form extends BaseComponent {
       eventType: 'click',
       callback: (e) => {
         e.preventDefault();
-        const serverUrl = process.env.NODE_ENV === 'development'
-          ? 'http://api.web.students.nomoreparties.co/' : 'https://api.web.students.nomoreparties.co/';
-        root.querySelector('.popup__button_reg').textContent = 'Загрузка...';
+        const serverUrl = 'https://api.web.students.nomoreparties.co/';
+        formSignUpButton.element.textContent = 'Загрузка...';
         const dataUser = {
           email: emailSignUp.value,
           password: passSignUp.value,
@@ -137,24 +136,23 @@ export default class Form extends BaseComponent {
           .signUp(dataUserJson)
           .then((res) => {
             if (!res.message) {
-              root.querySelector('.popup__button_reg').textContent = 'Зарегистрироваться';
+              formSignUpButton.element.textContent = 'Зарегистрироваться';
               this.popupReg.setAttribute('style', 'display: none');
               this.popupWelcome.setAttribute('style', 'display: flex');
               return console.log(res);
             }
-            root.querySelector('.popup__button_reg').textContent = 'Зарегистрироваться';
+            formSignUpButton.element.textContent = 'Зарегистрироваться';
             return Promise.reject(res.message);
           });
       },
     };
-    const formSignIpButton = {
+    const formSignInButton = {
       element: root.querySelector('.popup__button_signin'),
       eventType: 'click',
       callback: (e) => {
         e.preventDefault();
-        const serverUrl = process.env.NODE_ENV === 'development'
-          ? 'https://api.web.students.nomoreparties.co/' : 'https://api.web.students.nomoreparties.co/';
-        root.querySelector('.popup__button_signin').textContent = 'Загрузка...';
+        const serverUrl = 'https://api.web.students.nomoreparties.co/';
+        formSignInButton.element.textContent = 'Загрузка...';
         const dataUser = {
           email: emailSignIn.value,
           password: passSignIn.value,
@@ -163,19 +161,40 @@ export default class Form extends BaseComponent {
         new MainApi(`${serverUrl}signin`)
           .signIn(dataUserJson)
           .then((res) => {
-            if (!res) {
-              root.querySelector('.popup__button_signin').textContent = 'Войти';
+            if (!res.message) {
+              formSignInButton.element.textContent = 'Войти';
               this.popupSignIn.setAttribute('style', 'display: none');
-              this.token = res;
-              new MainApi(`${serverUrl}users/me`).getUserInfo();
-              return this.token;
+              this.token = res.jwt;
+              new MainApi(`${serverUrl}users/me`, this.token).getUserInfo();
+              return console.log(this.token);
             }
-            root.querySelector('.popup__button_signin').textContent = 'Войти';
+            formSignInButton.element.textContent = 'Войти';
+            return Promise.reject(res.message);
+          });
+      },
+    };
+    const formSign = {
+      element: root.querySelector('.header__button'),
+      eventType: 'click',
+      callback: (e) => {
+        e.preventDefault();
+        const serverUrl = 'https://api.web.students.nomoreparties.co/';
+        new MainApi(`${serverUrl}users/me`)
+          .getUserInfo()
+          .then((res) => {
+            if (!res) {
+              console.log(res);
+              return console.log(res);
+            }
             return Promise.reject(res);
           });
       },
     };
-    this._listeners.push(formSigninInput, formSignUpInput, formSignUpButton, formSignIpButton);
+    this._listeners.push(formSigninInput,
+      formSignUpInput,
+      formSignUpButton,
+      formSignInButton,
+      formSign);
     this._setListener(this._listeners);
   }
 }

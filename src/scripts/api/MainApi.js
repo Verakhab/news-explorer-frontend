@@ -8,9 +8,9 @@ export default class MainApi {
     try {
       const res = await fetch(this.url, {
         method: 'GET',
-        // credentials: 'include',
+        credentials: 'include',
       });
-      return await console.log(res.json());
+      return await res.json();
     } catch (err) {
       if (err.message === 'Failed to fetch') {
         return new Error('Ошибка запроса');
@@ -24,7 +24,7 @@ export default class MainApi {
     try {
       const res = await fetch(this.url, {
         method: 'POST',
-        // credentials: 'include',
+        credentials: 'include',
         headers: {
           'Content-Type': 'application/json',
         },
@@ -44,13 +44,13 @@ export default class MainApi {
     try {
       const res = await fetch(this.url, {
         method: 'POST',
-        // credentials: 'include',
+        credentials: 'include',
         headers: {
           'Content-Type': 'application/json',
         },
         body: this.json,
       });
-      return await console.log(res.json());
+      return await res.json();
     } catch (err) {
       if (err.message === 'Failed to fetch') {
         return new Error('Ошибка запроса');
