@@ -8,7 +8,9 @@ export default class MainApi {
     try {
       const res = await fetch(this.url, {
         method: 'GET',
-        credentials: 'include',
+        headers: {
+          authorization: `Bearer ${localStorage.getItem('token')}`,
+        },
       });
       return await res.json();
     } catch (err) {
@@ -24,7 +26,6 @@ export default class MainApi {
     try {
       const res = await fetch(this.url, {
         method: 'POST',
-        credentials: 'include',
         headers: {
           'Content-Type': 'application/json',
         },
@@ -44,7 +45,6 @@ export default class MainApi {
     try {
       const res = await fetch(this.url, {
         method: 'POST',
-        credentials: 'include',
         headers: {
           'Content-Type': 'application/json',
         },
@@ -62,7 +62,9 @@ export default class MainApi {
   async getArticles() {
     try {
       const res = await fetch(this.url, {
-        credentials: 'include',
+        headers: {
+          authorization: `Bearer ${localStorage.getItem('token')}`,
+        },
       });
       return await res.json();
     } catch (err) {
@@ -75,8 +77,8 @@ export default class MainApi {
   async createArticle(keyword, title, text, date, source, link, image) {
     const res = await fetch(`${this._baseURL}articles`, {
       method: 'POST',
-      credentials: 'include',
       headers: {
+        authorization: `Bearer ${localStorage.getItem('token')}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
@@ -95,8 +97,8 @@ export default class MainApi {
   async removeArticle(id) {
     const res = await fetch(`${this._baseURL}articles/${id}`, {
       method: 'DELETE',
-      credentials: 'include',
       headers: {
+        authorization: `Bearer ${localStorage.getItem('token')}`,
         'Content-Type': 'application/json',
       },
     });

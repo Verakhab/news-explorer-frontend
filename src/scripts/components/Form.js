@@ -170,7 +170,8 @@ export default class Form extends BaseComponent {
             }
             formSignInButton.element.textContent = 'Войти';
             return Promise.reject(res.message);
-          });
+          })
+          .then((data) => localStorage.setItem('token', data.token));
       },
     };
     const formSign = {
