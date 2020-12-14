@@ -1,0 +1,41 @@
+.news__img-share_login {
+  background-image: url('../../../../../../images/Group12.png');
+  width: 10%;
+  height: 7%;
+  position: absolute;
+  top: 1.7vw;
+  right: 1.8vw;
+  z-index: 1;
+  border-radius: 0.5vw;
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.news__img-share_login {
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .news__img-share_login {
+    width: 18%;
+    top: 1.1vw;
+    right: 1vw;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .news__img-share_login {
+    width: 13%;
+    top: 3vw;
+    right: 3vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .news__img-share {
+    width: 14%;
+    top: 5.1vw;
+    right: 5vw;
+  }
+}

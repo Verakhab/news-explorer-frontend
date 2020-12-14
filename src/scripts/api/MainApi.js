@@ -1,13 +1,14 @@
-export default class MainApi {
-  constructor(url, token) {
+import BaseComponent from '../components/BaseComponent';
+
+export default class MainApi extends BaseComponent {
+  constructor(url) {
+    super();
     this.url = url;
-    this.token = token;
   }
 
   async getUserInfo() {
     try {
       const res = await fetch(this.url, {
-        method: 'GET',
         headers: {
           authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -61,7 +62,7 @@ export default class MainApi {
 
   async getArticles() {
     try {
-      const res = await fetch(this.url, {
+      const res = await fetch(`${this.url}`, {
         headers: {
           authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -75,44 +76,45 @@ export default class MainApi {
   }
 
   async createArticle(keyword, title, text, date, source, link, image) {
-    const res = await fetch(`${this._baseURL}articles`, {
-      method: 'POST',
-      headers: {
-        authorization: `Bearer ${localStorage.getItem('token')}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        keyword,
-        title,
-        text,
-        date,
-        source,
-        link,
-        image,
-      }),
-    });
-    return await res.json();
+    try {
+      const res = await fetch(this.url, {
+        method: 'POST',
+        headers: {
+          authorization: `Bearer ${localStorage.getItem('token')}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          keyword,
+          title,
+          text,
+          date,
+          source,
+          link,
+          image,
+        }),
+      });
+      return await res.json();
+    } catch (err) {
+      if (err.message === 'Failed to fetch') {
+        return new Error('Ошибка запроса');
+      }
+    }
   }
 
   async removeArticle(id) {
-    const res = await fetch(`${this._baseURL}articles/${id}`, {
-      method: 'DELETE',
-      headers: {
-        authorization: `Bearer ${localStorage.getItem('token')}`,
-        'Content-Type': 'application/json',
-      },
-    });
-    return await res.json();
-    // {
-    //   if (res.ok) {
-    //     return res.json();
-    //   }
-    //   return res.json().then((err) => err);
-    // })
-    // .catch((err) => {
-    //   const resErr = err;
-    //   resErr.message = 'Произошла ощибка на сервере, попробуйте снова позже';
-    //   return err;
-    // });
+    try {
+      const res = await fetch(`${this.url}articles/${id}`, {
+        method: 'DELETE',
+        headers: {
+          authorization: `Bearer ${localStorage.getItem('token')}`,
+          'Content-Type': 'application/json',
+        },
+      });
+      return await res.json();
+    } catch (err) {
+      if (err.message === 'Failed to fetch') {
+        return new Error('Ошибка запроса');
+      }
+    }
   }
 }

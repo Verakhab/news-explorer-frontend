@@ -2,6 +2,7 @@
 @import url(./_about/news__img-share_about.css);
 @import url(./_about-text/news__img-share_about-text.css);
 @import url(./_title/news__img-share_title.css);
+@import url(./_title-text/news__img-share_title-text.css);
 
 .news__img-share {
   width: 10%;
@@ -9,6 +10,7 @@
   top: 1.7vw;
   right: 1.7vw;
   z-index: 1;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {

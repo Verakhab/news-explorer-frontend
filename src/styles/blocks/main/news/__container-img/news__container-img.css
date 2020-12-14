@@ -1,7 +1,6 @@
 .news__container-img {
   display: flex;
-  width: 32%;
-  height: 18.9vw;
+  height: 19vw;
 }
 
 @media screen and (max-width: 768px) {

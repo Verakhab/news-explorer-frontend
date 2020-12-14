@@ -8,5 +8,6 @@
     width: 5vw;
     padding: 1.5vw 0 0 0;
     height: 0.69vw;
+    cursor: pointer;
   }
 }

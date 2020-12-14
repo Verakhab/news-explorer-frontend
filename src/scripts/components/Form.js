@@ -1,6 +1,9 @@
 import BaseComponent from './BaseComponent';
 import validButton from '../utils/validButton';
 import MainApi from '../api/MainApi';
+import Header from './Header';
+import NewsApi from '../api/NewsApi';
+import NewsArticle from './NewsArticle';
 
 const root = document.querySelector('.root');
 const popupSignIn = root.querySelector('.popup_signin-block');
@@ -14,36 +17,23 @@ export default class Form extends BaseComponent {
     this.popupReg = popupReg;
     this.popupWelcome = popupWelcome;
     this._validatorForm = this._validatorForm.bind(this);
-    this._setEventListeners();
   }
 
-  setServerError() {
-    const errorEmailSignIn = root.querySelector('.popup__error_signin-email');
-    errorEmailSignIn.textContent = '11';
-    errorEmailSignIn.setAttribute('style', 'display: flex');
-    const errorPassSignIn = root.querySelector('.popup__error_signin-pass');
-    errorPassSignIn.textContent = '22';
-    errorPassSignIn.setAttribute('style', 'display: flex');
+  setServerError(error) {
     const errorFormSignIn = root.querySelector('.popup__error_signin-form');
-    errorFormSignIn.textContent = '33';
+    errorFormSignIn.textContent = error;
     errorFormSignIn.setAttribute('style', 'display: flex');
-    const errorEmailReg = root.querySelector('.popup__error_email-reg');
-    errorEmailReg.textContent = '11';
-    errorEmailReg.setAttribute('style', 'display: flex');
-    const errorPassReg = root.querySelector('.popup__error_pass-reg');
-    errorPassReg.textContent = '22';
-    errorPassReg.setAttribute('style', 'display: flex');
-    const errorNameReg = root.querySelector('.popup__error_name-reg');
-    errorNameReg.textContent = '33';
-    errorNameReg.setAttribute('style', 'display: flex');
     const errorFormReg = root.querySelector('.popup__error_user-is');
-    errorFormReg.textContent = '44';
+    errorFormReg.textContent = error;
     errorFormReg.setAttribute('style', 'display: flex');
   }
 
   _validateInputElement(input) {
     let error = '';
     if (!input.checkValidity()) {
+      if (input.name === 'email' && !input.typeMismatch) {
+        error = 'Здесь должен быть email';
+      }
       if (input.validity.tooShort || input.validity.tooLong) {
         error = 'Не менее 2 и не более 30 символов';
       }
@@ -83,11 +73,14 @@ export default class Form extends BaseComponent {
     const emailSignUp = formSignUp.elements.email;
     const passSignUp = formSignUp.elements.pass;
     const nameSignUp = formSignUp.elements.name;
-    return emailSignIn.value,
+    const arrInputInfo = [
+      emailSignIn.value,
       passSignIn.value,
       emailSignUp.value,
       passSignUp.value,
-      nameSignUp.value;
+      nameSignUp.value,
+    ];
+    return console.log(arrInputInfo);
   }
 
   _setEventListeners() {
@@ -98,7 +91,7 @@ export default class Form extends BaseComponent {
     const emailSignUp = formSignUp.elements.email;
     const passSignUp = formSignUp.elements.pass;
     const nameSignUp = formSignUp.elements.name;
-    const formSigninInput = {
+    const formSignInInput = {
       element: root.querySelector('.popup__form-signin'),
       eventType: 'input',
       callback: (e) => {
@@ -124,7 +117,7 @@ export default class Form extends BaseComponent {
       eventType: 'click',
       callback: (e) => {
         e.preventDefault();
-        const serverUrl = 'https://api.web.students.nomoreparties.co/';
+        const serverUrl = 'https://api.web.students.nomoreparties.space/';
         formSignUpButton.element.textContent = 'Загрузка...';
         const dataUser = {
           email: emailSignUp.value,
@@ -139,9 +132,10 @@ export default class Form extends BaseComponent {
               formSignUpButton.element.textContent = 'Зарегистрироваться';
               this.popupReg.setAttribute('style', 'display: none');
               this.popupWelcome.setAttribute('style', 'display: flex');
-              return console.log(res);
+              return res;
             }
             formSignUpButton.element.textContent = 'Зарегистрироваться';
+            this.setServerError(res.message);
             return Promise.reject(res.message);
           });
       },
@@ -151,7 +145,7 @@ export default class Form extends BaseComponent {
       eventType: 'click',
       callback: (e) => {
         e.preventDefault();
-        const serverUrl = 'https://api.web.students.nomoreparties.co/';
+        const serverUrl = 'https://api.web.students.nomoreparties.space/';
         formSignInButton.element.textContent = 'Загрузка...';
         const dataUser = {
           email: emailSignIn.value,
@@ -164,40 +158,147 @@ export default class Form extends BaseComponent {
             if (!res.message) {
               formSignInButton.element.textContent = 'Войти';
               this.popupSignIn.setAttribute('style', 'display: none');
-              this.token = res.jwt;
-              new MainApi(`${serverUrl}users/me`, this.token).getUserInfo();
-              return console.log(this.token);
+              localStorage.setItem('token', res.token);
+              new MainApi(`${serverUrl}users/me`)
+                .getUserInfo()
+                .then((data) => {
+                  if (!res.message) {
+                    console.log(data);
+                    new Header().render(data);
+                    return data;
+                  }
+                  return Promise.reject(data.message);
+                });
+              return res;
             }
             formSignInButton.element.textContent = 'Войти';
+            this.setServerError(res.message);
             return Promise.reject(res.message);
-          })
-          .then((data) => localStorage.setItem('token', data.token));
+          });
       },
     };
-    const formSign = {
+    const formSerch = {
       element: root.querySelector('.header__button'),
       eventType: 'click',
       callback: (e) => {
         e.preventDefault();
-        const serverUrl = 'https://api.web.students.nomoreparties.co/';
-        new MainApi(`${serverUrl}users/me`)
-          .getUserInfo()
-          .then((res) => {
-            if (!res) {
-              console.log(res);
-              return console.log(res);
-            }
-            return Promise.reject(res);
-          });
+        const formSearch = document.forms.search;
+        const inputSearch = formSearch.elements.search;
+        const inputError = root.querySelector('.header__form-error');
+        if (!inputSearch.value) {
+          root.querySelector('.header__button')
+            .setAttribute('style', 'background-color: #2F71E5');
+          inputError.textContent = 'Нужно ввести ключевое слово';
+          inputError.setAttribute('style', 'display: flex');
+        } else {
+          root.querySelector('.header__button')
+            .setAttribute('style', 'background-color: #2F71E5');
+          inputError.textContent = '';
+          inputError.setAttribute('style', 'display: none');
+          root.querySelector('.popup__button.popup__button_result')
+            .setAttribute('style', 'display: none');
+          root.querySelector('.result__container')
+            .textContent = '';
+          root.querySelector('.result')
+            .setAttribute('style', 'display: flex');
+          root.querySelector('.result__title')
+            .setAttribute('style', 'display: none');
+          root.querySelector('.preloader-block_no-result')
+            .setAttribute('style', 'display: none');
+          root.querySelector('.preloader-block')
+            .setAttribute('style', 'display: flex');
+          new NewsApi()
+            .getNews(inputSearch.value)
+            .then((res) => {
+              if (res.totalResults) {
+                root.querySelector('.result')
+                  .setAttribute('style', 'display: flex');
+                root.querySelector('.result__title')
+                  .setAttribute('style', 'display: flex');
+                root.querySelector('.preloader-block')
+                  .setAttribute('style', 'display: flex');
+                const allCards = () => {
+                  console.log(res.articles);
+                  this.articles = res.articles;
+                  const articlesCount = 3;
+                  let articlesArray = [];
+                  if (res.articles.length > articlesCount) {
+                    articlesArray = res.articles.splice(0, articlesCount);
+                    root.querySelector('.popup__button.popup__button_result')
+                      .setAttribute('style', 'display: inline-block');
+                  } else {
+                    articlesArray = res.articles;
+                    root.querySelector('.popup__button_result')
+                      .setAttribute('style', 'display: none');
+                  }
+                  articlesArray.forEach((item) => {
+                    new NewsArticle(
+                      item.urlToImage,
+                      item.publishedAt,
+                      item.title,
+                      item.url,
+                      item.description,
+                      item.source.name,
+                      inputSearch.value,
+                    ).createNews();
+                    console.log(item);
+                  });
+                };
+                allCards();
+                root.querySelector('.preloader-block')
+                  .setAttribute('style', 'display: none');
+              } else {
+                root.querySelector('.preloader-block')
+                  .setAttribute('style', 'display: none');
+                root.querySelector('.preloader-block_no-result')
+                  .setAttribute('style', 'display: flex', 'margin-top: 1vh');
+              }
+            });
+        }
       },
     };
-    this._listeners.push(formSigninInput,
+    const moreSerch = {
+      element: root.querySelector('.popup__button_result'),
+      eventType: 'click',
+      callback: (e) => {
+        e.preventDefault();
+        const formSearch = document.forms.search;
+        const inputSearch = formSearch.elements.search;
+        let articlesCount = 3;
+        const articlesView = articlesCount;
+        const moreCards = () => {
+          let articlesArray = [];
+          if (this.articles.length > articlesCount) {
+            articlesArray = this.articles.splice(articlesCount, articlesView);
+          } else {
+            root.querySelector('.popup__button_result')
+              .setAttribute('disabled', true);
+          }
+          articlesArray.forEach((item) => {
+            new NewsArticle(
+              item.urlToImage,
+              item.publishedAt,
+              item.title,
+              item.url,
+              item.description,
+              item.source.name,
+              inputSearch.value,
+            ).createNews();
+            console.log(articlesArray);
+            articlesCount = +3;
+          });
+        };
+        moreCards();
+      },
+    };
+    this._listeners.push(formSignInInput,
       formSignUpInput,
       formSignUpButton,
       formSignInButton,
-      formSign);
+      formSerch,
+      moreSerch);
     this._setListener(this._listeners);
   }
 }
 
-const F = new Form();
+new Form()._setEventListeners();

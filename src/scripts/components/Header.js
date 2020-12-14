@@ -3,27 +3,29 @@ import toggle from '../utils/toggle';
 
 const root = document.querySelector('.root');
 
-const a = {
-  userName: 'Денис [->',
-  isLoggedIn: true,
-};
-
 export default class Header extends BaseComponent {
-  constructor(props) {
+  constructor() {
     super();
-    this.userName = props.userName;
-    this.isLoggedIn = props.isLoggedIn;
-    this._setEventListeners();
   }
 
-  render() {
-    const signIn = root.querySelector('.menu_signin-news');
-    const signUp = root.querySelector('.menu_save-news');
-    const usExit = root.querySelector('.menu__item-signin-text_signin');
-    if (this.isLoggedIn) {
-      toggle(signIn, signUp);
-      usExit.textContent = this.userName;
-    } else toggle(signUp, signIn);
+  render(props) {
+    if (document.location.href.includes('articles.html')) {
+      const usExit = root.querySelector('.menu__item-signin-text_articles');
+      const title = root.querySelector('.header__title');
+      usExit.textContent = `${props.name} [->`;
+      title.textContent = `${props.name}${title.textContent}`;
+    } else {
+      const signIn = root.querySelector('.menu_signin-news');
+      const signUp = root.querySelector('.menu_save-news');
+      const usExit = root.querySelector('.menu__item-signin-text_signin');
+      if (!props) {
+        toggle(signUp, signIn);
+      } else {
+        toggle(signIn, signUp);
+        usExit.textContent = `${props.name} [->`;
+      }
+    }
+
   }
 
   _setEventListeners() {
@@ -90,7 +92,17 @@ export default class Header extends BaseComponent {
       element: root.querySelector('.menu__item-signin-text_signin'),
       eventType: 'click',
       callback: () => {
-        document.location.replace('./articles.html');
+        localStorage.removeItem('token');
+        this.render();
+      },
+    };
+    const userExitArticles = {
+      element: root.querySelector('.menu__item-signin-text_articles'),
+      eventType: 'click',
+      callback: () => {
+        root.querySelector('.menu__item-signin-text_articles')
+          .setAttribute('href', './index.html');
+        localStorage.removeItem('token');
       },
     };
     this._listeners.push(
@@ -103,13 +115,14 @@ export default class Header extends BaseComponent {
       loggedInMobile,
       mainMobile,
       pageArticlesMobile,
+      userExitArticles,
     );
     this._setListener(this._listeners);
   }
 
-  _clearEventListeners() {
-    this._clearListener();
-  }
+  // _clearEventListeners() {
+  //   this._clearListener(this._listeners);
+  // }
 }
 
-const Head = new Header(a);
+new Header()._setEventListeners();

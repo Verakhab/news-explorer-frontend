@@ -1,4 +1,5 @@
 .result__title {
+  display: none;
   position: relative;
   top: 4.5vw;
   left: 7vw;

@@ -1,15 +1,15 @@
 .popup__error.popup__error_signin-form {
-  top: 235px;
-  left: 197px;
+  top: 36vh;
+  left: 8vw;
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 1.1vw;
 }
 
 @media screen and (max-width: 320px) {
   .popup__error.popup__error_signin-form {
-    top: 159px;
-    left: 138px;
+    top: 247px;
+    left: 90px;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;

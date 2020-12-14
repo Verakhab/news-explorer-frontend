@@ -9,7 +9,11 @@ export default class BaseComponent {
 
   _setListener(listeners) {
     listeners.forEach((listener) => {
-      this._addListener(listener.element, listener.eventType, listener.callback);
+      if (listener.element === null) {
+        console.log(listener.callback, listener.element);
+      } else {
+        this._addListener(listener.element, listener.eventType, listener.callback);
+      }
     });
   }
 
