@@ -1,6 +1,6 @@
 .popup__name_registr {
   position: relative;
-  top: 8vw;
+  top: 16vh;
   left: 6.5vw;
   font-family: 'Roboto';
   font-style: normal;
@@ -13,7 +13,7 @@
 
 @media screen and (max-width: 768px) {
   .popup__name_registr {
-    top: 14.5vw;
+    top: 14.5vh;
     left: 12vw;
     font-size: 1.91vw;
   }
@@ -21,7 +21,7 @@
 
 @media screen and (max-width: 320px) {
   .popup__name_registr {
-    top: 29.8vw;
+    top: 29.8vh;
     left: 18vw;
     font-size: 4.62vw;
   }

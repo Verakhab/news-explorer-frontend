@@ -1,0 +1,9 @@
+.popup__error.popup__error_signin-email {
+  top: 138px;
+}
+
+@media screen and (max-width: 320px) {
+  .popup__error.popup__error_signin-email {
+    top: 80px;
+  }
+}

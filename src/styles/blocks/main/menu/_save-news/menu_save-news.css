@@ -1,3 +1,10 @@
-.menu.menu_save-news {
+.menu_save-news {
   display: none;
+}
+
+@media screen and (max-width: 320px) {
+  .menu_save-news {
+    display: none;
+    position: absolute;
+  }
 }

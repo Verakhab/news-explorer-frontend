@@ -1,9 +1,15 @@
 .menu__list.menu__list_save-news {
-  width: 430px;
+  padding: 0.4vw 5vw 0 0;
 }
 
 @media screen and (max-width: 768px) {
   .menu__list.menu__list_save-news {
-    width: 44.4vw;
+    padding: 0.4vw 3.35vw 0 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .menu__list.menu__list_save-news {
+    display: none;
   }
 }

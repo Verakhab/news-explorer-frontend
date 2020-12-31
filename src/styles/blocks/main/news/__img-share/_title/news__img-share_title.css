@@ -1,0 +1,33 @@
+.news__img-share_title {
+  position: absolute;
+  width: 18%;
+  top: 1.68vw;
+  left: 1.7vw;
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .news__img-share_title {
+    width: 31%;
+    top: 1.3vw;
+    left: 1.46vw;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .news__img-share_title {
+    width: 31%;
+    top: 3.2vw;
+    height: 5.5vw;
+    left: 3vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .news__img-share_title {
+    width: 29%;
+    top: 5.1vw;
+    left: 5.7vw;
+    height: 13vw;
+  }
+}

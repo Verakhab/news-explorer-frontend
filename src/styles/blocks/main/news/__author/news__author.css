@@ -1,6 +1,6 @@
 .news__author {
   position: relative;
-  top: 7.4vw;
+  top: 7.4vh;
   font-family: 'Roboto Slab', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -16,7 +16,7 @@
   .news__author {
     top: 8.2vw;
     font-size: 2.11vw;
-    height: 9vw;
+    height: 10vw;
   }
 }
 
@@ -24,14 +24,15 @@
   .news__author {
     top: 11.2vw;
     font-size: 2.11vw;
-    height: 2vw;
+    height: 13vw;
   }
 }
 
 @media screen and (max-width: 320px) {
   .news__author {
-    top: 42.2vw;
+    top: 29.2vw;
     left: 3.4vw;
     font-size: 5.11vw;
+    height: 16vh;
   }
 }

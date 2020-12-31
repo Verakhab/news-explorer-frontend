@@ -1,7 +1,7 @@
 @media screen and (max-width: 320px) {
   .popup__content_mobile-320 {
-    width: 100vw;
-    top: -46.62vw;
+    width: 94.3vw;
+    top: -60vw;
     left: 0vw;
     min-height: 88.4vw;
     border-top-left-radius: 0;
@@ -9,5 +9,6 @@
     border-bottom-left-radius: 4.5vw;
     border-bottom-right-radius: 4.5vw;
     background-color: #1A1B22;
+    display: flex;
   }
 }

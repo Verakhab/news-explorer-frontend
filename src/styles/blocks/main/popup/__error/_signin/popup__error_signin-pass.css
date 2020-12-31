@@ -1,0 +1,9 @@
+.popup__error.popup__error_signin-pass {
+  top: 220px;
+}
+
+@media screen and (max-width: 320px) {
+  .popup__error.popup__error_signin-pass {
+    top: 159px;
+  }
+}

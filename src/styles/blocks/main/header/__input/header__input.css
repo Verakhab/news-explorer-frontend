@@ -15,6 +15,7 @@
   font-weight: normal;
   font-size: 1.1vw;
   z-index: 0;
+  outline: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -22,7 +23,6 @@
     width: 84%;
     height: 7.4vw;
     left: 1.2vw;
-    top: 12.06vw;
     font-size: 2.1vw;
   }
 }

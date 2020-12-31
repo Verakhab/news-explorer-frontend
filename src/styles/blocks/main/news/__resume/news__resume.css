@@ -8,6 +8,10 @@
   line-height: 1.55vw;
   color: #1A1B22;
   margin: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 
 @media screen and (max-width: 768px) {
@@ -25,5 +29,6 @@
     right: -3vw;
     font-size: 5vw;
     line-height: 6.9vw;
+    margin-bottom: 4vh;
   }
 }

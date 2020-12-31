@@ -1,7 +1,10 @@
-@import url(./_signin/popup__error_signin.css);
+@import url(./_signin/popup__error_signin-email.css);
+@import url(./_signin/popup__error_signin-pass.css);
 @import url(./_email-reg/popup__error_email-reg.css);
 @import url(./_pass-reg/popup__error_pass-reg.css);
 @import url(./_user-is/popup__error_user-is.css);
+@import url(./_signin-form/popup__error_signin-form.css);
+@import url(./_name-reg/popup__error_name-reg.css);
 
 .popup__error {
   position: absolute;

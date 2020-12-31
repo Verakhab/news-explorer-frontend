@@ -1,6 +1,6 @@
 .popup__name_signin {
   position: relative;
-  top: 10.2vw;
+  top: 20.2vh;
   left: 10vw;
   font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
@@ -13,8 +13,16 @@
 
 @media screen and (max-width: 768px) {
   .popup__name_signin {
-    top: 46.7vw;
-    left: 35vw;
-    font-size: 4vw;
+    top: 20vh;
+    left: 18.5vw;
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .popup__name_signin {
+    top: 25vh;
+    left: 34.5vw;
+    font-size: 4.62vw;
   }
 }

@@ -1,3 +1,9 @@
 .popup__error.popup__error_email-reg {
-  top: 137px;
+  top: 138px;
+}
+
+@media screen and (max-width: 320px) {
+  .popup__error.popup__error_email-reg {
+    top: 80px;
+  }
 }

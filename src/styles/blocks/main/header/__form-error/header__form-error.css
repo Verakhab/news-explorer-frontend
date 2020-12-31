@@ -1,0 +1,40 @@
+.header__form-error {
+  position: relative;
+  width: 23vw;
+  left: 30vw;
+  color: #FFFFFF;
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1vw;
+  line-height: 1.67vw;
+}
+
+@media screen and (max-width: 768px) {
+  .header__form-error {
+    position: relative;
+    width: 23vw;
+    left: 23vw;
+    color: #FFFFFF;
+    font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5vw;
+    line-height: 1.67vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header__form-error {
+    position: absolute;
+    width: 42vw;
+    left: 11vw;
+    top: 65vh;
+    color: #FFFFFF;
+    font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.8vw;
+    line-height: 1.67vw;
+  }
+}

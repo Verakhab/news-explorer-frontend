@@ -28,8 +28,8 @@
 
 @media screen and (max-width: 320px) {
   .popup__button {
-      font-size: 5vw;
-      top: 79px;
-      width: 90vw;
+    font-size: 5vw;
+    top: 109px;
+    width: 90vw;
   }
 }

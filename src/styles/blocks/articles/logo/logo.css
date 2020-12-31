@@ -2,6 +2,7 @@
   color: #1A1B22;
   padding: 0.6vw 0 0 7.2vw;
   font-size: 1.35vw;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {

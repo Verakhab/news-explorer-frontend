@@ -1,0 +1,9 @@
+.popup__error.popup__error_name-reg {
+  top: 300px;
+}
+
+@media screen and (max-width: 320px) {
+  .popup__error.popup__error_name-reg {
+    top: 240px;
+  }
+}

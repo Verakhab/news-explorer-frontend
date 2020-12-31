@@ -1,6 +1,7 @@
 .menu_signin-news-two {
   max-width: 1440px;
   display: none;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 320px) {

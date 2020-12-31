@@ -1,4 +1,4 @@
-.news__img-share.news__img-share_about-text {
+.news__img-share_about-text {
   position: absolute;
   width: 40%;
   max-width: 100%;
@@ -12,10 +12,11 @@
   color: #000000;
   text-decoration: none;
   z-index: 3;
+  display: none;
 }
 
 @media screen and (max-width: 768px) {
-  .news__img-share.news__img-share_about-text {
+  .news__img-share_about-text {
     width: 55%;
     top: 3vw;
     left: 7.1vw;
@@ -24,7 +25,7 @@
 }
 
 @media screen and (max-width: 590px) {
-  .news__img-share.news__img-share_about-text {
+  .news__img-share_about-text {
     width: 57%;
     top: 2.8vw;
     left: 6.4vw;
