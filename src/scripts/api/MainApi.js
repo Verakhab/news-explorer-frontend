@@ -1,8 +1,5 @@
-import BaseComponent from '../components/BaseComponent';
-
-export default class MainApi extends BaseComponent {
+export default class MainApi {
   constructor(url) {
-    super();
     this.url = url;
   }
 

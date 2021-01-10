@@ -1,12 +1,8 @@
 import '../../styles/css/articles.css';
 import NewsArticle from '../components/NewsArticle';
 import Header from '../components/Header';
-// import Popup from './components/Popup';
-// import Form from './components/Form';
 import MainApi from '../api/MainApi';
-// import BaseComponent from '../components/BaseComponent';
 import checkToken from '../utils/checkToken';
-// import NewsApi from './api/NewsApi';
 
 checkToken();
 

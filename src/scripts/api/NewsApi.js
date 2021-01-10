@@ -1,9 +1,6 @@
 import { getDate } from '../utils/getDate';
 
 export default class NewsApi {
-  constructor() {
-  }
-
   async getNews(keyword) {
     try {
       const res = await fetch(
