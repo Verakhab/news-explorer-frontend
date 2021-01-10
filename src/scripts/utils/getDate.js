@@ -7,8 +7,8 @@ const getDate = (daysAgo = 0) => {
   const day = date.getDate();
 
   return `${date.getFullYear()}-${month < 10
-    ? `0${month}` :
-    month}-${day < 10 ? `0${day}` : day}`;
+    ? `0${month}`
+    : month}-${day < 10 ? `0${day}` : day}`;
 };
 
 const parseDate = (newsDate) => {

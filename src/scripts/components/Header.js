@@ -119,10 +119,6 @@ export default class Header extends BaseComponent {
     );
     this._setListener(this._listeners);
   }
-
-  // _clearEventListeners() {
-  //   this._clearListener(this._listeners);
-  // }
 }
 
 new Header()._setEventListeners();

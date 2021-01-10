@@ -163,7 +163,6 @@ export default class Form extends BaseComponent {
                 .getUserInfo()
                 .then((data) => {
                   if (!res.message) {
-                    console.log(data);
                     new Header().render(data);
                     return data;
                   }
@@ -218,7 +217,6 @@ export default class Form extends BaseComponent {
                 root.querySelector('.preloader-block')
                   .setAttribute('style', 'display: flex');
                 const allCards = () => {
-                  console.log(res.articles);
                   this.articles = res.articles;
                   const articlesCount = 3;
                   let articlesArray = [];
@@ -241,7 +239,6 @@ export default class Form extends BaseComponent {
                       item.source.name,
                       inputSearch.value,
                     ).createNews();
-                    console.log(item);
                   });
                 };
                 allCards();
@@ -284,7 +281,6 @@ export default class Form extends BaseComponent {
               item.source.name,
               inputSearch.value,
             ).createNews();
-            console.log(articlesArray);
             articlesCount = +3;
           });
         };
