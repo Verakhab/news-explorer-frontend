@@ -34,27 +34,27 @@ export default class NewsArticle extends BaseComponents {
 
     if (document.location.href.includes('articles.html')) {
       const imgShareDelete = this.createElem('img', 'news__img-share');
-      imgShareDelete.setAttribute('src', '../../images/Group11.png');
+      imgShareDelete.setAttribute('src', './images/Group11.png');
       imgConteiner.append(imgShareDelete);
     } else {
       const imgShareButton = this.createElem('button', 'news__img-share');
       this.imgShareButton = imgShareButton;
       const imgShare = this.createElem('img', 'news__img-share');
-      imgShare.setAttribute('src', '../../images/Group14.png');
+      imgShare.setAttribute('src', './images/Group14.png');
       imgConteiner.append(imgShare);
       imgShare.append(imgShareButton);
     }
 
     if (document.location.href.includes('articles.html')) {
       const newsImgShareTitle = this.createElem('img', 'news__img-share_title');
-      newsImgShareTitle.setAttribute('src', '../../images/Rectangle77.png');
+      newsImgShareTitle.setAttribute('src', './images/Rectangle77.png');
       imgConteiner.append(newsImgShareTitle);
       const newsImgShareTitleText = this.createElem('a', 'news__img-share_title-text');
       newsImgShareTitleText.textContent = this.keyword;
       imgConteiner.append(newsImgShareTitleText);
     }
     const imgShareAbout = this.createElem('img', 'news__img-share_about');
-    imgShareAbout.setAttribute('src', '../../images/bg.png');
+    imgShareAbout.setAttribute('src', './images/bg.png');
     imgConteiner.append(imgShareAbout);
 
     const imgShareAboutText = this.createElem('a', 'news__img-share_about-text');
@@ -105,7 +105,7 @@ export default class NewsArticle extends BaseComponents {
             .includes('Group11.png')) {
             this.card
               .querySelector('.news__img-share')
-              .setAttribute('src', '../../images/Group122.png');
+              .setAttribute('src', './images/Group122.png');
             this.card
               .querySelector('.news__img-share_about')
               .setAttribute('style', 'display: flex');
@@ -136,7 +136,7 @@ export default class NewsArticle extends BaseComponents {
             .includes('Group122.png')) {
             this.card
               .querySelector('.news__img-share')
-              .setAttribute('src', '../../images/Group11.png');
+              .setAttribute('src', './images/Group11.png');
             this.card
               .querySelector('.news__img-share_about')
               .setAttribute('style', 'display: none');
@@ -184,7 +184,7 @@ export default class NewsArticle extends BaseComponents {
             && event.target.closest('.news__img-share')) {
             this.card
               .querySelector('.news__img-share')
-              .setAttribute('src', '../../images/Group12.png');
+              .setAttribute('src', './images/Group12.png');
             new MainApi('https://api.web.students.nomoreparties.space/articles')
               .createArticle(
                 this.keyword,
@@ -204,7 +204,7 @@ export default class NewsArticle extends BaseComponents {
               .removeArticle(this.articleId);
             this.card
               .querySelector('.news__img-share')
-              .setAttribute('src', '../../images/Group14.png');
+              .setAttribute('src', './images/Group14.png');
           }
         }
       },
