@@ -1,4 +1,4 @@
-.header__button {
+.button.header__button {
   position: absolute;
   right: 0px;
   width: 27.5%;
@@ -15,65 +15,37 @@
   z-index: 1;
 }
 
-.header__button:hover {
+.button.header__button:hover {
   cursor: pointer;
   background-color: #347EFF;
 }
 
-.header__button:active, button:focus {
-  outline: none;
-  background-color: #2A65CC;
+.button.header__button:active {
+  cursor: pointer;
+  background-color: #1753fa;
 }
 
-.header__button::-moz-focus-inner {
+.button.header__button::-moz-focus-inner {
   border: 0;
 }
 
 @media screen and (max-width: 768px) {
-  .header__button {
+  .button.header__button {
     right: 1vw;
     width: 34%;
     font-size: 2.3vw;
     height: 7.4vw;
     border-radius: 4vw;
   }
-
-  .header__button:hover {
-    cursor: pointer;
-    background-color: #347EFF;
-  }
-
-  .header__button:active, button:focus {
-    outline: none;
-    background-color: #2A65CC;
-  }
-
-  .header__button::-moz-focus-inner {
-    border: 0;
-  }
 }
 
 @media screen and (max-width: 320px) {
-  .header__button {
+  .button.header__button {
     left: 0vw;
     top: 104.77vw;
     width: 90vw;
     height: 17.5vw;
     font-size: 5.3vw;
     border-radius: 9vw;
-  }
-
-  .header__button:hover {
-    cursor: pointer;
-    background-color: #347EFF;
-  }
-
-  .header__button:active, button:focus {
-    outline: none;
-    background-color: #2A65CC;
-  }
-
-  .header__button::-moz-focus-inner {
-    border: 0;
   }
 }

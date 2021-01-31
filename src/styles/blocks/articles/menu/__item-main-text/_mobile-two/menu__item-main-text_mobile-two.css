@@ -2,9 +2,12 @@
   .menu__item-main-text.menu__item-main-text_mobile-two {
     position: absolute;
     border-bottom: 0;
-    top: 21.4vw;
-    right: -49vw;
+    top: -17.6vw;
+    left: 5vw;
     width: 55vw;
     display: flex;
+    font-weight: 400;
+    font-size: 5.63vw;
+    color: white;
   }
 }

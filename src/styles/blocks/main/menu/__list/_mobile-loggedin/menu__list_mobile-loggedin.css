@@ -1,0 +1,7 @@
+@media screen and (max-width: 320px) {
+  .menu__list.menu__list_mobile-loggedin {
+    font-size: 5.5vw;
+    top: 38vw;
+    left: -6vw;
+  }
+}

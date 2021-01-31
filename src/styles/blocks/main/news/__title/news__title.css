@@ -1,5 +1,6 @@
 .news__title {
   position: relative;
+  width: 95%;
   top: 1.6vw;
   font-family: 'Roboto Slab', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;

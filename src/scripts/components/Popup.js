@@ -15,6 +15,7 @@ export default class Popup extends BaseComponent {
     const popupReg = root.querySelector('.popup_reg-block');
     const popupWelcome = root.querySelector('.popup_welcome-block');
     const popupMobile = root.querySelector('.popup_mobile-320');
+    const popupMobileLoggedIn = root.querySelector('.popup_mobile-320-loggedin');
     const popupError = root.querySelector('.popup_error-block');
     const openSignUpPopup = {
       element: root.querySelector('.popup__registration-link'),
@@ -44,7 +45,12 @@ export default class Popup extends BaseComponent {
       element: root.querySelector('.menu_signin-news-two'),
       eventType: 'click',
       callback: () => {
-        popupMobile.setAttribute('style', 'display: flex');
+        if (!document.location.href.includes('articles.html')
+        && !localStorage.getItem('token')) {
+          popupMobileLoggedIn.setAttribute('style', 'display: flex');
+        } else {
+          popupMobile.setAttribute('style', 'display: flex');
+        }
       },
     };
     const openPopupError = {
@@ -69,6 +75,7 @@ export default class Popup extends BaseComponent {
     const popupReg = root.querySelector('.popup_reg-block');
     const popupWelcome = root.querySelector('.popup_welcome-block');
     const popupMobile = root.querySelector('.popup_mobile-320');
+    const popupMobileLoggedIn = root.querySelector('.popup_mobile-320-loggedin');
     const popupError = root.querySelector('.popup_error-block');
     const closePopupSignIn = {
       element: root.querySelector('.popup'),
@@ -106,6 +113,15 @@ export default class Popup extends BaseComponent {
         }
       },
     };
+    const closePopupMobileLoggedIn = {
+      element: root.querySelector('.popup_mobile-320-loggedin'),
+      eventType: 'click',
+      callback: (e) => {
+        if (e.target.classList.contains('popup') || e.target.classList.contains('popup__close')) {
+          popupMobileLoggedIn.setAttribute('style', 'display: none');
+        }
+      },
+    };
     const closePopupError = {
       element: root.querySelector('.popup_error-block'),
       eventType: 'click',
@@ -121,6 +137,7 @@ export default class Popup extends BaseComponent {
       closePopupWelcome,
       closePopupError,
       closePopupMobile,
+      closePopupMobileLoggedIn,
     );
     this._setListener(this._listeners);
   }
@@ -130,17 +147,19 @@ export default class Popup extends BaseComponent {
     const popupReg = root.querySelector('.popup_reg-block');
     const popupWelcome = root.querySelector('.popup_welcome-block');
     const popupMobile = root.querySelector('.popup_mobile-320');
+    const popupMobileLoggedIn = root.querySelector('.popup_mobile-320-loggedin');
     const popupError = root.querySelector('.popup_error-block');
     const closeEscPopup = {
       element: document,
       eventType: 'keyup',
       callback: (e) => {
-        if (e.code === 'Escape') {
+        if (e.code === 'Escape' && !document.location.href.includes('articles.html')) {
           popupSignIn.setAttribute('style', 'display: none');
           popupReg.setAttribute('style', 'display: none');
           popupWelcome.setAttribute('style', 'display: none');
           popupMobile.setAttribute('style', 'display: none');
           popupError.setAttribute('style', 'display: none');
+          popupMobileLoggedIn.setAttribute('style', 'display: none');
         }
       },
     };

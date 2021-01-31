@@ -27,8 +27,9 @@
 
 @media screen and (max-width: 460px) {
   .news__author  {
-    top: 7.5vw;
+    top: 8.5vw;
     font-size: 2.11vw;
+    height: 11vw;
   }
 }
 

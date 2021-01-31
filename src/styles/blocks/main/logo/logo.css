@@ -1,6 +1,11 @@
 .logo {
   padding: 5px 0 0 7.2vw;
   cursor: pointer;
+  transition: opacity .2s ease-in;
+}
+
+.logo:hover {
+  opacity: .6;
 }
 
 @media screen and (max-width: 768px) {

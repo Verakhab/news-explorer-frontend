@@ -2,3 +2,11 @@
   text-decoration: none;
   color: #1A1B22;
 }
+
+.footer__list-item:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.footer__list-item {
+  transition: transform .2s ease-in;
+}

@@ -185,13 +185,9 @@ export default class Form extends BaseComponent {
         const inputSearch = formSearch.elements.search;
         const inputError = root.querySelector('.header__form-error');
         if (!inputSearch.value) {
-          root.querySelector('.header__button')
-            .setAttribute('style', 'background-color: #2F71E5');
           inputError.textContent = 'Нужно ввести ключевое слово';
           inputError.setAttribute('style', 'display: flex');
         } else {
-          root.querySelector('.header__button')
-            .setAttribute('style', 'background-color: #2F71E5');
           inputError.textContent = '';
           inputError.setAttribute('style', 'display: none');
           root.querySelector('.popup__button.popup__button_result')

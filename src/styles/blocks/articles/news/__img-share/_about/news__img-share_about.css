@@ -1,8 +1,39 @@
 .news__img-share_about {
-  width: 56%;
+  width: 45%;
+  height: 2.8vw;
   position: absolute;
-  top: 0.8vw;
-  right: 3.4vw;
+  background-color: white;
+  top: 1.7vw;
+  right: 5vw;
+  border-radius: 0.6vw;
+  align-items: center;
   z-index: 2;
+  justify-content: center;
   display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .news__img-share_about {
+    height: 3.6vw;
+    top: 1.1vw;
+    right: 5.5vw;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .news__img-share_about {
+    height: 5.4vw;
+    top: 3.1vw;
+    right: 9.5vw;
+    border-radius: 1vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .news__img-share_about {
+    height: 11.7vw;
+    top: 5.1vw;
+    right: 17.5vw;
+    border-radius: 2vw;
+  }
 }

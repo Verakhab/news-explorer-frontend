@@ -1,9 +1,9 @@
 @media screen and (max-width: 320px) {
-  .popup__content_mobile-320 {
+  .popup__content.popup__content_mobile-320-loggedin {
     width: 94.3vw;
-    top: -60vw;
+    top: -72.3vw;
     left: 0vw;
-    min-height: 88.4vw;
+    min-height: 63.4vw;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-left-radius: 4.5vw;

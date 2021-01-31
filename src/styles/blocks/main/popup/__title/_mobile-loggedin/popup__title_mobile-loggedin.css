@@ -1,0 +1,13 @@
+@media screen and (max-width: 320px) {
+  .popup__title.popup__title_mobile-loggedin {
+    border-bottom: 0.3px solid white;
+    position: relative;
+    color: white;
+    top: -7vw;
+    right: 11vw;
+    width: 94.7vw;
+    padding: 0px 0px 13px 32px;
+    font-family: 'Roboto Slab', 'Arial', 'Helvetica', sans-serif;
+    font-size: 4.8vw;
+  }
+}
