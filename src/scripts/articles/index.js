@@ -3,6 +3,7 @@ import NewsArticle from '../components/NewsArticle';
 import Header from '../components/Header';
 import MainApi from '../api/MainApi';
 import checkToken from '../utils/checkToken';
+import Popup from '../components/Popup';
 
 checkToken();
 

@@ -11,17 +11,21 @@ export default class Header extends BaseComponent {
   render(props) {
     if (document.location.href.includes('articles.html')) {
       const usExit = root.querySelector('.menu__item-signin-text_articles');
+      const usExitMobile = root.querySelector('.menu__item-signin-text_mobile');
       const title = root.querySelector('.header__title');
+      usExitMobile.textContent = `${props.name} [->`;
       usExit.textContent = `${props.name} [->`;
       title.textContent = `${props.name}${title.textContent}`;
     } else {
       const signIn = root.querySelector('.menu_signin-news');
       const signUp = root.querySelector('.menu_save-news');
+      const usExitMobile = root.querySelector('.menu__item-signin-text_mobile');
       const usExit = root.querySelector('.menu__item-signin-text_signin');
       if (!props) {
         toggle(signUp, signIn);
       } else {
         toggle(signIn, signUp);
+        usExitMobile.textContent = `${props.name} [->`;
         usExit.textContent = `${props.name} [->`;
       }
     }
@@ -29,6 +33,7 @@ export default class Header extends BaseComponent {
   }
 
   _setEventListeners() {
+    const popupMobileLoggedIn = root.querySelector('.popup_mobile-320-loggedin');
     const popupSignIn = root.querySelector('.popup_signin-block');
     const popupMobile = root.querySelector('.popup_mobile-320');
     const logo = {
@@ -59,6 +64,13 @@ export default class Header extends BaseComponent {
         document.location.replace('./index.html');
       },
     };
+    const mainMobileLoggedIn = {
+      element: root.querySelector('.menu__item-main-text_mobile-loggedin'),
+      eventType: 'click',
+      callback: () => {
+        document.location.replace('./index.html');
+      },
+    };
     const loggedIn = {
       element: root.querySelector('.menu__item-signin'),
       eventType: 'click',
@@ -67,10 +79,10 @@ export default class Header extends BaseComponent {
       },
     };
     const loggedInMobile = {
-      element: root.querySelector('.menu__item-signin_mobile'),
+      element: root.querySelector('.menu__item-signin-text_mobile-loggedin'),
       eventType: 'click',
       callback: () => {
-        popupMobile.setAttribute('style', 'display: none');
+        popupMobileLoggedIn.setAttribute('style', 'display: none');
         popupSignIn.setAttribute('style', 'display: flex');
       },
     };
@@ -96,6 +108,21 @@ export default class Header extends BaseComponent {
         this.render();
       },
     };
+    const userExitMobile = {
+      element: root.querySelector('.menu__item-signin-text_mobile'),
+      eventType: 'click',
+      callback: () => {
+        if (document.location.href.includes('articles.html')) {
+          popupMobile.setAttribute('style', 'display: none');
+          document.location.replace('./index.html');
+          localStorage.removeItem('token');
+        } else {
+          popupMobile.setAttribute('style', 'display: none');
+          localStorage.removeItem('token');
+          this.render();
+        }
+      },
+    };
     const userExitArticles = {
       element: root.querySelector('.menu__item-signin-text_articles'),
       eventType: 'click',
@@ -115,7 +142,9 @@ export default class Header extends BaseComponent {
       loggedInMobile,
       mainMobile,
       pageArticlesMobile,
+      userExitMobile,
       userExitArticles,
+      mainMobileLoggedIn,
     );
     this._setListener(this._listeners);
   }

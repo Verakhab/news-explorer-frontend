@@ -1,5 +1,4 @@
 @import url(./_mobile/menu__item-signin-text_mobile.css);
-@import url(./_signin/menu__item-signin-text_signin.css);
 
 .menu__item-signin-text {
   font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
@@ -9,16 +8,15 @@
   line-height: 1vw;
   color: #1A1B22;
   text-decoration: none;
-  padding: 0.8vw 1.4vw;
-  border: 0.1vw solid #1A1B22;
-  border-radius: 2vw;
+  padding: 0 0vw 1.7vw;
+  border-bottom: 0.2vw solid #1A1B22;
 }
 
 @media screen and (max-width: 768px) {
   .menu__item-signin-text {
     font-size: 2.1vw;
-    padding: 1.1vw 2.2vw;
-    border-radius: 3vw;
+    padding: 2.6vw 0vw;
+    border-bottom: 0.3vw solid #1A1B22;
   }
 }
 

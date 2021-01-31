@@ -1,18 +1,24 @@
-.menu__item-signin-text_signin {
+.menu__item-signin-text_articles {
   font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 1.2vw;
   line-height: 1vw;
+  color: #1A1B22;
   text-decoration: none;
-  color: white;
   padding: 0.8vw 1.4vw;
-  border: 0.1vw solid  rgba(255, 255, 255);
+  border: 0.1vw solid #1A1B22;
   border-radius: 2vw;
 }
 
+@media screen and (max-width: 830px) {
+  .menu__item-signin-text_articles {
+    padding: 0.8vw 1.4vw;
+  }
+}
+
 @media screen and (max-width: 768px) {
-  .menu__item-signin-text_signin {
+  .menu__item-signin-text_articles {
     font-size: 2.1vw;
     padding: 1.1vw 2.2vw;
     border-radius: 2.5vw;
@@ -20,7 +26,7 @@
 }
 
 @media screen and (max-width: 320px) {
-  .menu__item-signin-text_signin {
+  .menu__item-signin-text_articles {
     display: none;
   }
 }

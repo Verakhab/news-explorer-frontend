@@ -30,7 +30,7 @@
 @media screen and (max-width: 320px) {
   .header__title {
     top: 10.8vw;
-    max-width: 286px;
+    max-width: 85vw;
     font-size: 9.5vw;
     line-height: 11vw;
   }

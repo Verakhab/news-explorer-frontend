@@ -1,5 +1,5 @@
 @media screen and (max-width: 320px) {
-  .popup__close.popup__close_mobile {
+  .popup__close.popup__close_mobile-loggedin {
     width: 14px;
     position: absolute;
     top: 19px;

@@ -22,6 +22,7 @@
 @import url(./_signin-block/popup_signin-block.css);
 @import url(./_reg-block/popup_reg-block.css);
 @import url(./_error-block/popup_error-block.css);
+@import url(./_mobile-320-loggedin/popup_mobile-320-loggedin.css);
 
 .popup {
   position: fixed;

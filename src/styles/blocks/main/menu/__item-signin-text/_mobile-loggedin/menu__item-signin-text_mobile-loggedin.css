@@ -1,18 +1,14 @@
 @media screen and (max-width: 320px) {
-  .menu__item-signin-text.menu__item-signin-text_mobile {
+  .menu__item-signin-text.menu__item-signin-text_mobile-loggedin {
     color: white;
     position: absolute;
-    top: 1.7vw;
+    top: 43.7vw;
     left: 5vw;
-    width: 84vw;
+    width: 80vw;
     justify-content: center;
     text-align: center;
     font-size: 5.6vw;
     display: flex;
     font-weight: 400;
-    border: 0.3vw solid white;
-    border: 1px solid rgba(255, 255, 255);
-    border-radius: 50px;
-    line-height: 1.7vw;
   }
 }

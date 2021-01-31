@@ -1,7 +1,7 @@
-.menu__item-signin {
+.menu__item-main {
   transition: opacity .2s ease-in;
 }
 
-.menu__item-signin:hover {
+.menu__item-main:hover {
   opacity: .6;
 }

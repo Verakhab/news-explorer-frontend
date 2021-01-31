@@ -3,6 +3,11 @@
   padding: 0.6vw 0 0 7.2vw;
   font-size: 1.35vw;
   cursor: pointer;
+  transition: opacity .2s ease-in;
+}
+
+.logo:hover {
+  opacity: .6;
 }
 
 @media screen and (max-width: 768px) {

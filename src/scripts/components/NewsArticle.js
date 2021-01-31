@@ -46,15 +46,13 @@ export default class NewsArticle extends BaseComponents {
     }
 
     if (document.location.href.includes('articles.html')) {
-      const newsImgShareTitle = this.createElem('img', 'news__img-share_title');
-      newsImgShareTitle.setAttribute('src', './images/Rectangle77.png');
+      const newsImgShareTitle = this.createElem('div', 'news__img-share_title');
       imgConteiner.append(newsImgShareTitle);
       const newsImgShareTitleText = this.createElem('a', 'news__img-share_title-text');
       newsImgShareTitleText.textContent = this.keyword;
-      imgConteiner.append(newsImgShareTitleText);
+      newsImgShareTitle.append(newsImgShareTitleText);
     }
-    const imgShareAbout = this.createElem('img', 'news__img-share_about');
-    imgShareAbout.setAttribute('src', './images/bg.png');
+    const imgShareAbout = this.createElem('div', 'news__img-share_about');
     imgConteiner.append(imgShareAbout);
 
     const imgShareAboutText = this.createElem('a', 'news__img-share_about-text');
@@ -63,7 +61,7 @@ export default class NewsArticle extends BaseComponents {
     } else {
       imgShareAboutText.textContent = 'Войдите, чтобы сохранять статьи';
     }
-    imgConteiner.append(imgShareAboutText);
+    imgShareAbout.append(imgShareAboutText);
 
     const newsAboutContainer = this.createElem('div', 'news__about');
     news.append(newsAboutContainer);
@@ -171,8 +169,12 @@ export default class NewsArticle extends BaseComponents {
             && event.target.closest('.news__img-share') && window
             .confirm('Действительно удалить статью из сохраненных?')) {
             new MainApi('https://api.web.students.nomoreparties.space/')
-              .removeArticle(this._id);
-            this.container.removeChild(this.card);
+              .removeArticle(this._id)
+              .then((res) => {
+                if (res) {
+                  this.container.removeChild(this.card);
+                }
+              });
           }
         }
         if (!document.location.href.includes('articles.html')) {
@@ -199,9 +201,15 @@ export default class NewsArticle extends BaseComponents {
                 const articleId = res._id;
                 this.articleId = articleId;
               });
-          } else if (window.confirm('Действительно удалить статью из сохраненных?')) {
+          } else if (event.target.closest('.news__img-share')
+          && window.confirm('Действительно удалить статью из сохраненных?')) {
             new MainApi('https://api.web.students.nomoreparties.space/')
-              .removeArticle(this.articleId);
+              .removeArticle(this.articleId)
+              .then((res) => {
+                if (res) {
+                  this.container.removeChild(this.card);
+                }
+              });
             this.card
               .querySelector('.news__img-share')
               .setAttribute('src', './images/Group14.png');

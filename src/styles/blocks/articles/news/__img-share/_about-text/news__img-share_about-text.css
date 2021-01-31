@@ -1,9 +1,6 @@
 .news__img-share_about-text {
   position: absolute;
-  width: 40%;
   max-width: 100%;
-  top: 2.65vw;
-  left: 11.1vw;
   font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -15,8 +12,14 @@
   display: none;
 }
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 460px) {
   .news__img-share_about-text {
-    top: 2.4vw;
+    font-size: 1.6vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .news__img-share_about-text {
+    font-size: 3vw;
   }
 }
