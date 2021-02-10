@@ -1,11 +1,28 @@
-# News explorer
+# News explorer frontend
+
+Github: 
+```
+https://github.com/Verakhab/news-explorer-frontend
+```
+gh-pages: 
+```
+https://verakhab.github.io/news-explorer-frontend/
+```
+URL: 
+```
+https://web.students.nomoreparties.space/
+```
+Diploma work
 
 Version: v.1.0.0
 
 ## Описание Проекта
+
+Cайт - Иследователь новостей
+
 Проект поиска новостей. Выполняет поиск новостей по запросам пользователя, возможно
 сохранить новости в своем аккаунте. Дипломная работа Яндекс.Практикума.
-__Используемые технологии:__ CSS, HTML, WebPack, GIT, Babel, PostCSS.
+__Используемые технологии:__ CSS, HTML, JS, WebPack, GIT, Babel, PostCSS.
 
 ## Локальный запуск
 1. Склонировать репозиторий
@@ -30,7 +47,3 @@ __Используемые технологии:__ CSS, HTML, WebPack, GIT, Babe
     ```
         npm run deploy
     ```
-
-## Внесение изменений
-При необходимости, после внесения изменений, запустить тестирование
-```
