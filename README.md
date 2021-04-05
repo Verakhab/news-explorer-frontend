@@ -1,28 +1,24 @@
 # News explorer frontend
 
-Github: 
-```
-https://github.com/Verakhab/news-explorer-frontend
-```
-gh-pages: 
-```
-https://verakhab.github.io/news-explorer-frontend/
-```
-URL: 
-```
-https://web.students.nomoreparties.space/
-```
+Github: https://github.com/Verakhab/news-explorer-frontend
+
+gh-pages: https://verakhab.github.io/news-explorer-frontend/
+
+URL: https://web.students.nomoreparties.space/
+
 Diploma work
 
 Version: v.1.0.0
 
 ## Описание Проекта
 
-Cайт - Иследователь новостей
+Двухстраничный сайт - Иследователь новостей.
 
-Проект поиска новостей. Выполняет поиск новостей по запросам пользователя, возможно
+Состоит из главной страницы поиска новостей и страницы пользователя где отображаются новости сохраненные им.
+Выполняет поиск новостей по запросам пользователя с помощью API - https://newsapi.org, возможно
 сохранить новости в своем аккаунте. Дипломная работа Яндекс.Практикума.
-__Используемые технологии:__ CSS, HTML, JS, WebPack, GIT, Babel, PostCSS.
+
+__Используемые технологии:__ HTML, CSS, JavaScript, Webpack, Babel, PostCSS, API, AJAX, Promise, BEM, адаптивная, кроссбраузерная вёрстка.
 
 ## Локальный запуск
 1. Склонировать репозиторий
